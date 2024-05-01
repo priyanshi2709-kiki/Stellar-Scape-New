@@ -1,0 +1,13 @@
+body {
+  text-align: center;
+  width: 100%;
+}
+#navbar{
+  width: 100%;
+}
+.video{
+  object-fit: cover;
+}
+.vid{
+  position: relative;
+}
