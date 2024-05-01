@@ -9,7 +9,10 @@ import { SnackbarProvider } from 'notistack'
 import Contact from './components/Contact'
 import EventHandling from './components/EventHandling'
 import ManageUser from './components/ManageUser'
-import ProductListing from './components/ProductListing'
+import ManageProject from './components/ManageProject'
+import UpdateProject from './components/UpdateProject'
+import ProjectListing from './components/ProjectListing'
+import AddProject from './components/AddProject'
 
 const App = () => {
   return (
@@ -26,13 +29,14 @@ const App = () => {
             <Route path='/Contact' element={<Contact />} />
             <Route path='/EventHandling' element={<EventHandling />} />
             <Route path='/ManageUser' element={<ManageUser />} />
-            <Route path='/ProductListing' element={<ProductListing />} />
-
+            <Route path='/ManageProject' element={<ManageProject />} />
+            <Route path='/ProjectListing' element={<ProjectListing />} />
+            <Route path='/UpdateProject' element={<UpdateProject />} />
+            <Route path='/AddProject' element={<AddProject />} />
           </Routes>
         </BrowserRouter>
       </SnackbarProvider>
     </div>
   )
 }
-
 export default App
