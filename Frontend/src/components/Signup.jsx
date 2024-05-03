@@ -2,7 +2,7 @@ import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { enqueueSnackbar } from 'notistack';
-import video from '../assets/SignupPage.mp4'
+import '../components/Signup.css'
 const signupSchema = Yup.object().shape({
   name: Yup.string()
     .required('Name is required')
@@ -15,7 +15,7 @@ const signupSchema = Yup.object().shape({
   password: Yup.string()
     .required('Password is required')
     .min(8, 'Password must be at least 8 characters')
-    .max(15, 'Password must be at most 15 characters')
+    .max(15, 'Password must be at most 25 characters')
 });
 
 const Signup = () => {
@@ -45,86 +45,61 @@ const Signup = () => {
     },
     validationSchema: signupSchema
   });
-
   return (
-    <div style={{ position: 'relative' }}>
-      {/* Video */}
-      <video className="video" src={video} type="video/mp4" autoPlay loop style={{ width: '100%' }} />
-
-      {/* Overlay Components */}
-      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>
-        {/* Form */}
-        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'white' }}>
-          <form onSubmit={signupForm.handleSubmit} className='bg-dark'>
-            <div className="row">
-              <div className="col-md-6 mb-4">
-                <div data-mdb-input-init="" className="form-outline">
-                  <label className="form-label">
-                    First name
-                  </label>
+    <div className="container px-4 py-5 mx-auto">
+      <div className="card0">
+        <div className="d-flex flex-lg-row flex-column-reverse">
+          <div className="card1">
+            <div className="row justify-content-center my-auto">
+              <div className="col-md-8 col-10 my-5">
+                <div className="row justify-content-center px-3 mb-3">
+                  <img id="logo" src="https://i.imgur.com/PSXxjNY.png" />
+                </div>
+                <h3 className="mb-5 text-center heading">We are Tidi</h3>
+                <h6 className="msg-info">Please login to your account</h6>
+                <div className="form-group">
+                  <label className="form-control-label text-muted">Username</label>
                   <input
                     type="text"
-                    className="form-control"
-                    name="fname"
-                    value={signupForm.values.fname}
-                    onChange={signupForm.handleChange}
-                  />
-                </div>
-                <div data-mdb-input-init="" className="form-outline">
-
-                  <label className="form-label">
-                    Last name
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="lname"
-                    value={signupForm.values.lname}
-                    onChange={signupForm.handleChange}
-                  />
-                </div>
-                <div data-mdb-input-init="" className="form-outline">
-
-                  <label className="form-label" >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    className="form-control"
+                    id="email"
                     name="email"
-                    value={signupForm.values.email}
-                    onChange={signupForm.handleChange}
+                    placeholder="Phone no or email id"
+                    className="form-control"
                   />
                 </div>
-                <div data-mdb-input-init="" className="form-outline">
-
-                  <label className="form-label">
-                    Password
-                  </label>
-                  <span style={{color:'red'}}>{signupForm.errors.password && signupForm.touched.password && signupForm.errors.password}</span>
+                <div className="form-group">
+                  <label className="form-control-label text-muted">Password</label>
                   <input
                     type="password"
+                    id="psw"
+                    name="psw"
+                    placeholder="Password"
                     className="form-control"
-                    name="password"
-                    value={signupForm.values.password}
-                    onChange={signupForm.handleChange}
-                    
                   />
-                  {/*{signupForm.errors.password && signupForm.touched.password && (
-                    <div>{signupForm.errors.password}</div>
-                  )}*/}
+                </div>
+                <div className="row justify-content-center my-3 px-3">
+                  <button className="btn-block btn-color">Login to Tidi</button>
+                </div>
+                <div className="row justify-content-center my-2">
+                  <a href="#">
+                    <small className="text-muted">Forgot Password?</small>
+                  </a>
                 </div>
               </div>
-              {/* Add more form fields as needed */}
             </div>
-            <button type="submit" className="btn btn-primary btn-block mb-4">
-              Sign up
-            </button>
-          </form>
+            <div className="bottom text-center mb-5">
+              <p href="#" className="sm-text mx-auto mb-3">
+                Don't have an account?
+                <button className="btn btn-white ml-2">Create new</button>
+              </p>
+            </div>
+          </div>
+          <div className="cardright">
+            <div className="my-auto mx-md-5 px-md-5 right"></div>
+          </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default Signup;
