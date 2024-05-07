@@ -21,11 +21,11 @@ const ProjectListing = () => {
             <div className="container ">
                 <div className="col-md-4">
                     <div className="card p-3 mb-5 bg-dark">
-                        <h3 className='mt-3 text-light'>{item.pname}</h3>
-                        <h5 className='mt-3 text-light'>{item.pprice}</h5>
-                        <p className='mt-3 text-light'>{item.pdescription}</p>
-                        <p className='mt-3 text-light'>{item.pcategory}</p>
-                        <p className='mt-3 text-light'>{item.image}</p>
+                        <h3 className='mt-3 text-light'>{item.name}</h3>
+                        {/* <h5 className='mt-3 text-light'>{item.pprice}</h5> */}
+                        <p className='mt-3 text-light'>{item.description}</p>
+                        {/* <p className='mt-3 text-light'>{item.pcategory}</p>/ */}
+                        {/* <p className='mt-3 text-light'>{item.image}</p> */}
                     </div>
                 </div>
             </div>

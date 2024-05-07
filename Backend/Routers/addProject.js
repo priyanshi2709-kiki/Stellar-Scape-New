@@ -13,10 +13,10 @@ router.post('/add', (req,res) => {
         res.status(500).json(err)  // 500 err means that there is an error in the code and not the server, it has to checked at the terminal of that particular code
     });
 })
-router.post('/getall',(req,res) => {
+router.get('/getall',(req,res) => {
     Model.find({}) // display all the data in that particular DB
     .then((result) => {
-        res.join(result);
+        res.json(result);
     }).catch((err) => {
         console.log(err)
         res.status(500).json(err)

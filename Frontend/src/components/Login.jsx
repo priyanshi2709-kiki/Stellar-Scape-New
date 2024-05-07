@@ -1,8 +1,8 @@
 import React from 'react'
 import { enqueueSnackbar } from 'notistack';
 import useAppContext from '../AppContext';
-import logo from "../assets/github-logo.png"
-import login from "../assets/login.gif"
+import gitLogo from "../assets/gitLogo.gif"
+import LoginBg from "../assets/LoginBg.svg"
 
 const Login = () => {
   const { setLoggedIn } = useAppContext();
@@ -40,10 +40,12 @@ const Login = () => {
 }
 
 return (
-  <div style={{backgroundImage: `url(${login})`, backgroundSize:'cover', height:'91vh'}}>
-  <div className='container d-flex justify-content-center'>
+  <div style={{backgroundImage: `url(${LoginBg})`, backgroundSize:'cover', height:'91vh'}}>
+  <div className='container d-flex '>
     <div className="card login-card">
-      <img src={logo} className='git-logo' />
+      <img src={gitLogo} className='git-logo' />
+      <div style={{fontSize: '25px', marginTop: '10px'}}>
+      <p> Login wih Github and you're all set!  </p></div>
       <button type="submit" className='login-btn' onClick={handleLogin}>
         Login with GitHub
       </button>

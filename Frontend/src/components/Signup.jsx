@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { enqueueSnackbar } from 'notistack';
 import '../components/Signup.css'
+import SourceNestLogo from '../assets/SourceNestLogo.png'
 const signupSchema = Yup.object().shape({
   name: Yup.string()
     .required('Name is required')
@@ -21,8 +22,7 @@ const signupSchema = Yup.object().shape({
 const Signup = () => {
   const signupForm = useFormik({
     initialValues: {
-      fname: '',
-      lname: '',
+      name: '',
       email: '',
       password: '',
     },
@@ -46,53 +46,57 @@ const Signup = () => {
     validationSchema: signupSchema
   });
   return (
-    <div className="container px-4 py-5 mx-auto">
-      <div className="card0">
+    <div className="container-fluid px-4 py-5 mx-auto back">
+      <div className="maincard">
         <div className="d-flex flex-lg-row flex-column-reverse">
-          <div className="card1">
+          <div className="cardleft">
+          <form onSubmit={signupForm.handleSubmit}>
             <div className="row justify-content-center my-auto">
               <div className="col-md-8 col-10 my-5">
                 <div className="row justify-content-center px-3 mb-3">
-                  <img id="logo" src="https://i.imgur.com/PSXxjNY.png" />
+                  <img src={SourceNestLogo} style={{width:'50%', marginTop: '10px'}} />
                 </div>
-                <h3 className="mb-5 text-center heading">We are Tidi</h3>
-                <h6 className="msg-info">Please login to your account</h6>
-                <div className="form-group">
-                  <label className="form-control-label text-muted">Username</label>
-                  <input
-                    type="text"
-                    id="email"
-                    name="email"
-                    placeholder="Phone no or email id"
-                    className="form-control"
-                  />
-                </div>
-                <div className="form-group">
-                  <label className="form-control-label text-muted">Password</label>
-                  <input
-                    type="password"
-                    id="psw"
-                    name="psw"
-                    placeholder="Password"
-                    className="form-control"
-                  />
-                </div>
-                <div className="row justify-content-center my-3 px-3">
-                  <button className="btn-block btn-color">Login to Tidi</button>
-                </div>
-                <div className="row justify-content-center my-2">
-                  <a href="#">
-                    <small className="text-muted">Forgot Password?</small>
-                  </a>
-                </div>
+                <h6 className="msg-info">Create a new acccount</h6>
+                  <div className="form-group fields">
+                    <label className="form-control-label text-muted ">Name</label>
+                    <span style={{ color: 'red', fontSize: '10', marginLeft: 10 }}>{signupForm.touched.name && signupForm.errors.name}</span>
+                    <input
+                      type="text"
+                      className="form-control mb-4"
+                      id='name'
+                      placeholder="Enter your name"
+                      onChange={signupForm.handleChange}
+                      value={signupForm.values.name} />
+
+                  </div>
+                  <div className="form-group fields">
+                    <label className="form-control-label text-muted">Email</label>
+                    <span style={{ color: 'red', fontSize: '10', marginLeft: 10 }}>{signupForm.touched.email && signupForm.errors.email}</span>
+                    <input
+                      type="text"
+                      id="email"
+                      placeholder="Phone no or email id"
+                      className="form-control"
+                      onChange={signupForm.handleChange}
+                      value={signupForm.values.email} />
+                  </div>
+                  <div className="form-group fields ">
+                    <label className="form-control-label text-muted">Password</label>
+                    <span style={{ color: 'red', fontSize: '10', marginLeft: 10 }}>{signupForm.touched.password && signupForm.errors.password}</span>
+                    <input
+                      type="password"
+                      id="password"
+                      placeholder="Password"
+                      className="form-control"
+                      onChange={signupForm.handleChange}
+                      value={signupForm.values.password} />
+                  </div>
+                  <div className="row justify-content-center my-3 px-3">
+                    <button className="btn-block btn-color">Signup</button>
+                  </div>
               </div>
             </div>
-            <div className="bottom text-center mb-5">
-              <p href="#" className="sm-text mx-auto mb-3">
-                Don't have an account?
-                <button className="btn btn-white ml-2">Create new</button>
-              </p>
-            </div>
+            </form>
           </div>
           <div className="cardright">
             <div className="my-auto mx-md-5 px-md-5 right"></div>

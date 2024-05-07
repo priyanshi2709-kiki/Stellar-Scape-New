@@ -21,6 +21,10 @@ const User = mongoose.model('User', new mongoose.Schema({
 
 const UserDataRouter = require('./Routers/UserData')
 const UserRouter = require('./Routers/user')
+const contactRouter = require('./Routers/contact')
+const addProjectRouter = require('./Routers/addProject')
+const utilRouter = require('./Routers/util')
+const adminRouter = require('./Routers/AdminLogin')
 
 
 app.use(cors({
@@ -29,7 +33,10 @@ app.use(cors({
 app.use(express.json());
 app.use('/userData', UserDataRouter)
 app.use('/user', UserRouter)
-
+app.use('/contact', contactRouter)
+app.use('/project', addProjectRouter)
+app.use('/util', utilRouter)
+app.use('/admin', AdminLoginRouter)
 
 // Configure GitHub strategy for Passport
 passport.use(new GitHubStrategy({
@@ -123,6 +130,6 @@ app.get('/', (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`Server is running at port ${port}`);
 }
 );
