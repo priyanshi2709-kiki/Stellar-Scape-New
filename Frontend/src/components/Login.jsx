@@ -40,7 +40,7 @@ const Login = () => {
 }
 
 return (
-  <div style={{backgroundImage: `url(${LoginBg})`, backgroundSize:'cover', height:'91vh'}}>
+  <div style={{backgroundImage: `url(${LoginBg})`, backgroundSize:'cover'}}>
   <div className='container d-flex '>
     <div className="card login-card">
       <img src={gitLogo} className='git-logo' />
@@ -49,8 +49,6 @@ return (
       <button type="submit" className='login-btn' onClick={handleLogin}>
         Login with GitHub
       </button>
-
-
       {/* <button onClick={getData}>Get User Data</button> */}
     </div>
   </div>

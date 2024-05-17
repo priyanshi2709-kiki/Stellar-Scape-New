@@ -24,7 +24,6 @@ const UserRouter = require('./Routers/user')
 const contactRouter = require('./Routers/contact')
 const addProjectRouter = require('./Routers/addProject')
 const utilRouter = require('./Routers/util')
-const adminRouter = require('./Routers/AdminLogin')
 
 
 app.use(cors({
@@ -36,7 +35,7 @@ app.use('/user', UserRouter)
 app.use('/contact', contactRouter)
 app.use('/project', addProjectRouter)
 app.use('/util', utilRouter)
-app.use('/admin', AdminLoginRouter)
+
 
 // Configure GitHub strategy for Passport
 passport.use(new GitHubStrategy({

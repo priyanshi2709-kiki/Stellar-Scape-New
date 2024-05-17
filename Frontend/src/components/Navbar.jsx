@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
-    <div><nav className="navbar navbar-expand-lg navbar-dark bg-dark"id='navbar'>
+    <div><nav className="navbar navbar-expand-lg navbar-dark bg-warning"id='navbar'>
       <div className="container-fluid">
-        <Link className="navbar-brand" to="#">
-          Navbar
+        <Link className="navbar-brand" to="Home">
+          <img src="" alt="" />
         </Link>
         <button
           className="navbar-toggler"
@@ -21,7 +21,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="#">
+              <Link className="nav-link active" aria-current="page" to="Home">
                 Home
               </Link>
             </li>

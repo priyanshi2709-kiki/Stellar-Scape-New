@@ -1,0 +1,155 @@
+/*.back {
+    color: #000;
+    overflow-x: auto;
+    height: 100%;
+    background-image: url(../assets/SignUpBackground.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fields{
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    background-color: #7ABA78;
+    border-radius: 50px !important;
+    padding: 12px 15px 12px 15px !important;
+    width: 100%;
+    box-sizing: border-box;
+    border: none !important;
+    border: 1px solid #F3CA52 !important;
+    font-size: 16px !important;
+    color: #000 !important;
+    font-weight: 400;
+}
+
+input:focus, textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 3px solid #7ABA78 !important;
+    outline-width: 0;
+    font-weight: 400;
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+}
+
+.maincard{
+    border-radius: 0;
+    border: none;
+    margin-left: 15%;
+}
+
+.cardleft {
+    width: 40%;
+    padding: 40px 30px 10px 30px;
+}
+
+/*.card2 {
+    width: 50%;
+    color: #fff;
+
+}*/
+.heading {
+    margin-bottom: 60px !important;
+}
+
+::placeholder {
+    color: black !important;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #000 !important;
+}
+
+::-ms-input-placeholder {
+    color: #000 !important;
+}
+
+.form-control-label {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.msg-info {
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.btn-color {
+    border-radius: 50px;
+    color: black;
+    background-image: linear-gradient(to right, #FFDE59, #FFDE59);
+    padding: 15px;
+    cursor: pointer;
+    border: none !important;
+    margin-top: 40px;
+    font-weight: 600;
+
+}
+
+.btn-color:hover {
+    color: #FFDE59;
+    background-image: linear-gradient(to right, black, black);
+}
+
+/*.bottom {
+    width: 100%;
+    margin-top: 100px !important;
+}*/
+
+.sm-text {
+    font-size: 15px;
+}
+
+@media screen and (max-width: 992px) {
+    .cardleft {
+        width: 100%;
+        padding: 40px 30px 10px 30px;
+    }
+
+    .cardright {
+        width: 100%;
+    }
+
+    .right {
+        margin-top: 100px !important;
+        margin-bottom: 100px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px !important;
+    }
+
+    .cardright {
+        padding: 50px;
+    }
+
+    .right {
+        margin-top: 50px !important;
+        margin-bottom: 50px !important;
+    }
+}
+.cardleft{
+    background-color: #FCFFE0;
+    border-radius: 20px;
+}
+.card{
+    border-radius: 20px;
+}
+.cardright{
+    background-color: #7ABA78;
+    width: 40%;
+    border-radius: 20px;
+    background-image: url(../assets/SignupImage.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

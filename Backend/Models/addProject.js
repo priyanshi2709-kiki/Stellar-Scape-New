@@ -1,8 +1,8 @@
 const {Schema, model} = require('../connection')
 const projectSchema =  new Schema ({
     pname:  String,
+    pinfo: String,
     pdescription: String,
-    pprice: String,
     pcategory: String,
     image: String
 });

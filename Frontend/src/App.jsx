@@ -18,6 +18,7 @@ import Navbar from './components/Navbar'
 import AddTask from './components/AddTask'
 import ForgetPassword from './components/ForgetPassword'
 import AdminLogin from './components/AdminLogin'
+import View from './components/View'
 
 const App = () => {
   return (
@@ -44,6 +45,7 @@ const App = () => {
               <Route path='/AddTask' element={<AddTask />} />
               <Route path='/ForgetPassword' element={<ForgetPassword />} />
               <Route path='/AdminLogin' element={<AdminLogin />} />
+              <Route path='/View/:id' element={<View />} />
 
             </Routes>
           </AppProvider>

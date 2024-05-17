@@ -1,12 +1,13 @@
-import React, {useState, useEffect} from 'react'
-
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import '../components/ProjectListing.css'
 const ProjectListing = () => {
     const [project, setProject] = useState([])
 
     const fetchProject = async () => {
         const res = await fetch('http://localhost:3000/project/getall')
         console.log(res.status)
-        if (res.status === 200){
+        if (res.status === 200) {
             const data = await res.json();
             console.log(data)
             setProject(data)
@@ -16,37 +17,44 @@ const ProjectListing = () => {
         fetchProject()
     }, []);
 
-    const displayProject = () =>{
-        return project.map((item) => (
-            <div className="container ">
-                <div className="col-md-4">
-                    <div className="card p-3 mb-5 bg-dark">
-                        <h3 className='mt-3 text-light'>{item.name}</h3>
-                        {/* <h5 className='mt-3 text-light'>{item.pprice}</h5> */}
-                        <p className='mt-3 text-light'>{item.description}</p>
-                        {/* <p className='mt-3 text-light'>{item.pcategory}</p>/ */}
-                        {/* <p className='mt-3 text-light'>{item.image}</p> */}
-                    </div>
+    const displayProjects = () => {
+        return project.map((pro) => (
+            <div className="ag-format-container">
+                <div className="ag-courses_box">
+                    <div className="ag-courses_item">
+                        <a href="#" className="ag-courses-item_link">
+                            <div className="ag-courses-item_bg" />
+                            <div className="ag-courses-item_title">
+                            <h3 className='mt-3 text-light'>{pro.pname}</h3>
+                            <p className='mt-3 text-light'>{pro.pinfo}</p>
+                        <img
+                            src={"http://localhost:3000/" + pro.image}
+                            alt=""
+                        />
+
+                             </div>
+                            <div className="ag-courses-item_date-box">
+                            <p className='mt-3 text-light'>{pro.pinfo}</p>
+                        <img
+                            src={"http://localhost:3000/" + pro.image}
+                            alt=""
+                        />
+
+                            </div>
+                            <Link to={'/View/' + pro._id} className='btn pro-btn mt-4 bg-white'>View More</Link>
+                        </a>
+                    </div>                    
                 </div>
             </div>
         ))
     }
-  return (
-    <div>
-        <header className='bg-body-tertiary'>
-            <div className="container py-5">
-                <p className='text-center fw-bold'>All Projects</p>
-                <input type='text' placeholder='Search Project' className='form-control w-75 m-auto' />
-            </div>
-        </header>
+    return (
+        <div className='row mt-5 p-5'>
+            <div className='col md-4 '>
 
-        <div className="container mt-5">
-            <div className="row mt-5 p-5">
-                {displayProject()}
+                {displayProjects()}
             </div>
         </div>
-    </div>
-  )
+    )
 }
-
 export default ProjectListing

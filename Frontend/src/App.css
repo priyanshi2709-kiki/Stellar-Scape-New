@@ -44,9 +44,6 @@
   margin-top: -500px;
   margin-left: 15px;
 }
-.mySwiper {
-  z-index: 500;
-}
 
 .bg-img {
   background-image: url(https://cdn.dribbble.com/userupload/10255782/file/original-69341582470d2731f1861bf8bddeb9b6.jpg?resize=1024x576);
@@ -131,7 +128,7 @@
   top: 0;
   left: 0;
   background-color: white;
-  overflow-x: hidden;
+  overflow-x: auto;
   transition: 0.5s;
   padding-top: 60px;
 }
@@ -224,7 +221,7 @@
   width: 500px;
   height: 500px;
   border-radius: 30px;
-  margin-top: 150px;
+  margin-top: 100px;
   margin-left: 80px;
   background: #FFFFFF;
   box-shadow: 0px 3px 6px #00000029;
@@ -255,4 +252,15 @@
   width: 52%;
   height: 55px;
 
+}
+
+.homebg2{
+  width: 500%;
+  height: 500%;
+  background-size: cover;
+}
+.home-bg{
+  width: 500%;
+  height: 500%;
+  background-size: cover;
 }

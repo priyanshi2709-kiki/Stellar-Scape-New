@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { enqueueSnackbar } from 'notistack';
 import '../components/Signup.css'
-import SourceNestLogo from '../assets/SourceNestLogo.png'
+import logo from '../assets/logo.png'
 const signupSchema = Yup.object().shape({
   name: Yup.string()
     .required('Name is required')
@@ -46,7 +46,7 @@ const Signup = () => {
     validationSchema: signupSchema
   });
   return (
-    <div className="container-fluid px-4 py-5 mx-auto back">
+    <div className="container-fluid px-4 py-5 mx-auto backk">
       <div className="maincard">
         <div className="d-flex flex-lg-row flex-column-reverse">
           <div className="cardleft">
@@ -54,7 +54,7 @@ const Signup = () => {
             <div className="row justify-content-center my-auto">
               <div className="col-md-8 col-10 my-5">
                 <div className="row justify-content-center px-3 mb-3">
-                  <img src={SourceNestLogo} style={{width:'50%', marginTop: '10px'}} />
+                  <img src={logo} style={{width:'50%', marginTop: '10px'}} />
                 </div>
                 <h6 className="msg-info">Create a new acccount</h6>
                   <div className="form-group fields">

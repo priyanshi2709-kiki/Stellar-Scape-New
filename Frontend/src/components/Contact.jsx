@@ -38,8 +38,8 @@ return (
                                         {/* 2 column grid layout with text inputs for the first and last names */}
                                         <div className="row">
                                             <div className=" ">
-                                                <div data-mdb-input-init="" className="form-outline">
-                                                    <input
+                                                <div data-mdb-inputt-init="" className="form-outline">
+                                                    <inputt
                                                         type="text"
                                                         id="name"
                                                         className="form-control"
@@ -55,8 +55,8 @@ return (
 
                                         </div>
                                         {/* Email input */}
-                                        <div data-mdb-input-init="" className="form-outline">
-                                            <input
+                                        <div data-mdb-inputt-init="" className="form-outline">
+                                            <inputt
                                                 type="email"
                                                 id="email"
                                                 className="form-control"
@@ -68,8 +68,8 @@ return (
                                             </label>
                                         </div>
                                         {/* Password input */}
-                                        <div data-mdb-input-init="" className="form-outline">
-                                            <textarea
+                                        <div data-mdb-inputt-init="" className="form-outline">
+                                            <textareaa
                                                 type="text"
                                                 id="query"
                                                 className="form-control"

@@ -55,7 +55,7 @@ router.put('/update/:id', (req,res) =>{
 router.get("/getuser/:id",(req,res) =>{
     Model.findById(req.params.id)
     .then((result)=> {
-       res.json(result)
+       res.json(result).json(result);
     }).catch((err)=>{
         console.log(err);
         res.status(500).json(err)
