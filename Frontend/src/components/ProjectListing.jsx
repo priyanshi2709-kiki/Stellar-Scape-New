@@ -19,8 +19,8 @@ const ProjectListing = () => {
 
     const displayProjects = () => {
         return project.map((pro) => (
-            <div className="ag-format-container">
-                <div className="ag-courses_box">
+            <div className="ag-format-container-fluid bbody">
+                <div className="col md-4 ag-courses_box">
                     <div className="ag-courses_item">
                         <a href="#" className="ag-courses-item_link">
                             <div className="ag-courses-item_bg" />
@@ -32,17 +32,10 @@ const ProjectListing = () => {
                             alt=""
                         />
 
-                             </div>
-                            <div className="ag-courses-item_date-box">
-                            <p className='mt-3 text-light'>{pro.pinfo}</p>
-                        <img
-                            src={"http://localhost:3000/" + pro.image}
-                            alt=""
-                        />
-
-                            </div>
-                            <Link to={'/View/' + pro._id} className='btn pro-btn mt-4 bg-white'>View More</Link>
+                             </div> 
                         </a>
+                        <Link to={'/View/' + pro._id} className='btn pro-btn mt-4 bg-white'>View More</Link>
+
                     </div>                    
                 </div>
             </div>

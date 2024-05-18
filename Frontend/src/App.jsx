@@ -12,7 +12,6 @@ import ProjectListing from './components/ProjectListing'
 import AddProject from './components/AddProject'
 import Login from './components/Login'
 import { AppProvider } from './AppContext'
-import Home_header from './components/Home_header'
 import Home_sidebar from './components/Home_sidebar'
 import Navbar from './components/Navbar'
 import AddTask from './components/AddTask'
@@ -26,7 +25,6 @@ const App = () => {
       <SnackbarProvider>
         <BrowserRouter>
           <AppProvider>
-            <Home_header />
             <Home_sidebar />
             <Navbar />
             <Routes>
