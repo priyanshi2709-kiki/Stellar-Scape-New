@@ -4,7 +4,7 @@ const ManageProject = () => {
     const [Data, setData] = useState([])
 
     const fetchUserData = async () => {
-        const res = await fetch('http://localhost:3000/product/getall')
+        const res = await fetch('http://localhost:3000/project/getall')
         console.log(res.status)
         if (res.status === 200){
             const data = await res.json();
@@ -18,7 +18,7 @@ const ManageProject = () => {
 
     const deleteProject = async (id) => {
         console.log(id);
-        const res = await fetch("http://localhost:3000/product/delete/" + id, {
+        const res = await fetch("http://localhost:3000/project/delete/" + id, {
             method: "DELETE",
         });
         if (res.status === 200) {
