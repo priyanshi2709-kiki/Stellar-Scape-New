@@ -23,6 +23,7 @@ const UserDataRouter = require('./Routers/UserData')
 const UserRouter = require('./Routers/user')
 const contactRouter = require('./Routers/contact')
 const addProjectRouter = require('./Routers/addProject')
+const addTaskRouter = require('./Routers/Task')
 const utilRouter = require('./Routers/util')
 
 
@@ -34,6 +35,7 @@ app.use('/userData', UserDataRouter)
 app.use('/user', UserRouter)
 app.use('/contact', contactRouter)
 app.use('/project', addProjectRouter)
+app.use('/task', addTaskRouter)
 app.use('/util', utilRouter)
 
 

@@ -7,18 +7,18 @@ import { SnackbarProvider } from 'notistack'
 import Contact from './components/Contact'
 import ManageUser from './components/ManageUser'
 import ManageProject from './components/ManageProject'
-import UpdateProject from './components/UpdateProject'
 import ProjectListing from './components/ProjectListing'
 import AddProject from './components/AddProject'
 import Login from './components/Login'
 import { AppProvider } from './AppContext'
 import Home_sidebar from './components/Home_sidebar'
-/*import Navbar from './components/Navbar'*/
-import AddTask from './components/AddTask'
+import Navbar from './components/Navbar'
 import ForgetPassword from './components/ForgetPassword'
 import AdminLogin from './components/AdminLogin'
 import View from './components/View'
-import Aboutus from './components/Aboutus'
+import UpdateProject from './components/UpdateProject'
+import UpdateTask from './components/UpdateTask'
+import AddTask from './components/AddTask'
 
 const App = () => {
   return (
@@ -46,6 +46,8 @@ const App = () => {
 
               <Route path='/ForgetPassword' element={<ForgetPassword />} />
               <Route path='/AdminLogin' element={<AdminLogin />} />
+              <Route path='/UpdateProject/:id' element={<UpdateProject />} />
+              <Route path='/UpdateTask/:id' element={<UpdateTask />} />
               <Route path='/View/:id' element={<View />} />
 
             </Routes>
