@@ -97,11 +97,44 @@ const Home = () => {
   //   }
   // }
   return (
-    <div>
-      <section className="row">
-        <img src={'./src/assets/HomeBg.svg'} alt="" className='home-bg' />
-        <div className="" style={{ marginTop: '-500px;' }}>
-          {/* {showLoginOption()} */}
+    <>
+      <header>
+        <nav className="header__nav" style={{marginBottom:'-35px'}}>
+          <div className="header__logo">
+            
+            <div className="header__logo-overlay " />
+            <img src={logo} alt="logo" style={{width:'20%', marginTop:'-35px', marginLeft:'-10px'}} />
+            <h4 data-aos="fade-down" style={{marginLeft:'-30px', color:'white'}}>Source Hype</h4>
+          </div>
+          <ul className="header__menu" data-aos="fade-down">
+            <li>
+              <Link className="signup" to="/Signup">Sign Up</Link>
+            </li>
+            <li>
+              <a href="#about-us">About Us</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#trending">Trending</a>
+            </li>
+
+            <li>
+              <img src="assets/search.svg" alt="search" />
+            </li>
+          </ul>
+          <ul className="header__menu-mobile" data-aos="fade-down">
+            <li>
+              <img src={hero} alt="hero" />
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section className="hero">
+        <div className="hero-image">
+          <img src={hero} alt="hero" data-aos="fade-up" style={{width:'100%'}} />
+          <div className="hero-image__overlay" />
         </div>
         <div className="hero-content">
           <div className="hero-content-info" data-aos="fade-left" >
@@ -109,7 +142,7 @@ const Home = () => {
             <p style={{ fontSize: '25px' }}>
               Work on Actual Projects with Source Hype's open source projects.
             </p>
-            <div className="hero-content__buttons" style={{marginLeft:'35%'}}>
+            <div className="hero-content__buttons" style={{marginLeft:'30%'}}>
               <Link to="/login">
                 <button className="hero-content__order-button">Login</button>
               </Link>
@@ -228,7 +261,7 @@ const Home = () => {
             <img
               className="popular-foods__card-image"
               src="assets/sushi-10.png"
-              alt="sushi-10"
+              alt="exhibis"
             />
             <h4 className="popular-foods__card-title">Exhibis</h4>
             <div className="popular-foods__card-details flex-between">

@@ -42,8 +42,6 @@ const App = () => {
               <Route path='/UpdateProject' element={<UpdateProject />} />
               <Route path='/AddProject' element={<AddProject />} />
               <Route path='/AddTask' element={<AddTask />} />
-              <Route path='/Aboutus' element={<Aboutus />} />
-
               <Route path='/ForgetPassword' element={<ForgetPassword />} />
               <Route path='/AdminLogin' element={<AdminLogin />} />
               <Route path='/UpdateProject/:id' element={<UpdateProject />} />
