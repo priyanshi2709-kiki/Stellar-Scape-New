@@ -12,7 +12,7 @@ import AddProject from './components/AddProject'
 import Login from './components/Login'
 import { AppProvider } from './AppContext'
 import Home_sidebar from './components/Home_sidebar'
-import Navbar from './components/Navbar'
+{/*import Navbar from './components/Navbar'*/}
 import ForgetPassword from './components/ForgetPassword'
 import AdminLogin from './components/AdminLogin'
 import View from './components/View'
@@ -42,8 +42,6 @@ const App = () => {
               <Route path='/UpdateProject' element={<UpdateProject />} />
               <Route path='/AddProject' element={<AddProject />} />
               <Route path='/AddTask' element={<AddTask />} />
-              <Route path='/Aboutus' element={<Aboutus />} />
-
               <Route path='/ForgetPassword' element={<ForgetPassword />} />
               <Route path='/AdminLogin' element={<AdminLogin />} />
               <Route path='/UpdateProject/:id' element={<UpdateProject />} />

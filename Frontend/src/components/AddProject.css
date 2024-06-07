@@ -1,23 +1,25 @@
-/*.back {
+.backk {
     color: #000;
     overflow-x: auto;
     height: 100%;
-    background-image: url(../assets/SignUpBackground.svg);
+    background-image: url(../assets/signupbg.gif);
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
 }
 .fields{
     margin-bottom: 10px;
+    
 }
 
 input, textarea {
-    background-color: #7ABA78;
+    background-color: #5271FF;
     border-radius: 50px !important;
     padding: 12px 15px 12px 15px !important;
     width: 100%;
     box-sizing: border-box;
     border: none !important;
-    border: 1px solid #F3CA52 !important;
+    border: 1px solid #5271FF !important;
     font-size: 16px !important;
     color: #000 !important;
     font-weight: 400;
@@ -27,9 +29,10 @@ input:focus, textarea:focus {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    border: 3px solid #7ABA78 !important;
+    border: 3px solid #5271FF !important;
     outline-width: 0;
     font-weight: 400;
+    width: 100px;
 }
 
 button:focus {
@@ -84,8 +87,8 @@ button:focus {
 
 .btn-color {
     border-radius: 50px;
-    color: black;
-    background-image: linear-gradient(to right, #FFDE59, #FFDE59);
+    color: white;
+    background-image: linear-gradient(to right, #1f1e31, #1f1e31);
     padding: 15px;
     cursor: pointer;
     border: none !important;
@@ -95,8 +98,8 @@ button:focus {
 }
 
 .btn-color:hover {
-    color: #FFDE59;
-    background-image: linear-gradient(to right, black, black);
+    color: #fff;
+    background-image: linear-gradient(to right, #555555, #555555);
 }
 
 /*.bottom {
@@ -139,16 +142,15 @@ button:focus {
     }
 }
 .cardleft{
-    background-color: #FCFFE0;
     border-radius: 20px;
+    background-color: #5271FF;
 }
 .card{
     border-radius: 20px;
 }
 .cardright{
-    background-color: #7ABA78;
-    width: 40%;
-    border-radius: 20px;
+    width: 50%;
+    border-radius: 30px;
     background-image: url(../assets/SignupImage.svg);
     background-repeat: no-repeat;
     background-size: cover;

@@ -54,7 +54,7 @@ const Signup = () => {
             <div className="row justify-content-center my-auto">
               <div className="col-md-8 col-10 my-5" style={{marginLeft:'-40px', marginRight:'40px'}}>
                 <div className="row justify-content-center px-3 mb-3">
-                  <img src={logo} style={{width:'100%', marginTop: '-50px'}} />
+                  <img src={logo} style={{width:'100%', height:'100%', marginTop: '-50px'}} />
                 </div>
                 <h5 className="msg-info" >Create a new acccount</h5>
                   <div className="form-group fields">
