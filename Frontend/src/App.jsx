@@ -27,14 +27,14 @@ const App = () => {
         <BrowserRouter>
           <AppProvider>
             <Home_sidebar />
-            <Navbar />
+            {/*<Navbar />*/}
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/Home' element={<Home />} />
               <Route path="/authenticated/:githubusername" element={<Home />} />
               <Route path='/Login' element={<Login />} />
               <Route path='/Signup' element={<Signup />} />
-              <Route path='/Navbar' element={<Navbar/>} /> 
+             { /*<Route path='/Navbar' element={<Navbar/>} />*/}
               <Route path='/Contact' element={<Contact />} />
               <Route path='/ManageUser' element={<ManageUser />} />
               <Route path='/ManageProject' element={<ManageProject />} />
@@ -42,6 +42,8 @@ const App = () => {
               <Route path='/UpdateProject' element={<UpdateProject />} />
               <Route path='/AddProject' element={<AddProject />} />
               <Route path='/AddTask' element={<AddTask />} />
+              <Route path='/Aboutus' element={<Aboutus />} />
+
               <Route path='/ForgetPassword' element={<ForgetPassword />} />
               <Route path='/AdminLogin' element={<AdminLogin />} />
               <Route path='/UpdateProject/:id' element={<UpdateProject />} />
