@@ -19,34 +19,36 @@ const ProjectListing = () => {
 
     const displayProjects = () => {
         return project.map((pro) => (
-            <div className="ag-format-container-fluid bbody">
-                <div className="col md-4 ag-courses_box">
-                    <div className="ag-courses_item">
-                        <a href="#" className="ag-courses-item_link">
-                            <div className="ag-courses-item_bg" />
-                            <div className="ag-courses-item_title">
-                            <h3 className='mt-3 text-light'>{pro.pname}</h3>
-                            <p className='mt-3 text-light'>{pro.pinfo}</p>
-                        <img
-                            src={"http://localhost:3000/" + pro.image}
-                            alt=""
-                        />
+            <div className="col-md-4">
+            <div class="ag-format-container">
+                <div class="ag-courses_box">
+                    <div class="ag-courses_item">
+                        <Link to="/View" class="ag-courses-item_link">
+                            <div class="ag-courses-item_bg"></div>
 
-                             </div> 
-                        </a>
-                        <Link to={'/View/' + pro._id} className='btn pro-btn mt-4 bg-white'>View More</Link>
+                            <div class="ag-courses-item_title">
+                                {pro.pname}
+                            </div>
 
-                    </div>                    
+                            <div class="ag-courses-item_date-box">
+                                Start:
+                                <span class="ag-courses-item_date">
+                                    04.11.2022
+                                </span>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
+            </div>
             </div>
         ))
     }
     return (
         <div className='row mt-5 p-5'>
-            <div className='col md-4 '>
+            {/* <div className='col md-4 '> */}
 
                 {displayProjects()}
-            </div>
+            {/* </div> */}
         </div>
     )
 }
