@@ -1,6 +1,8 @@
 import React,{useState, useEffect} from 'react'
+import {useNavigate } from "react-router-dom";
 
 const ManageProject = () => {
+    const navigate = useNavigate(); 
     const [Data, setData] = useState([])
 
     const fetchUserData = async () => {
@@ -34,10 +36,10 @@ const ManageProject = () => {
                 <td>{obj.pcategory}</td>
                 <td>{obj.pdescription}</td>
                 <td>
-                    <button className="btn btn-danger">Delete</button>
+                    <button className="btn btn-danger" onClick={() => { deleteProject(obj._id) }}>Delete</button>
                 </td>
                 <td>
-                    <button className="btn btn-danger">Update</button>
+                    <button className="btn btn-danger" onClick={ () => { navigate('/UpdateProject/'+obj._id) }}>Update</button>
                 </td>
             </tr>
         ))

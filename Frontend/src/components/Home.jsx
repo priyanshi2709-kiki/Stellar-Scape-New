@@ -40,62 +40,62 @@ import { EffectFade, Autoplay, Navigation, Pagination } from 'swiper/modules';*/
 
 const Home = () => {
 
-  const location = useLocation();
+  // const location = useLocation();
 
-  const isHomePage = location.pathname === '/';
+  // const isHomePage = location.pathname === '/';
 
-  const isLoggedIn = sessionStorage.getItem('user');
-  const [currentUser, setCurrentUser] = useState(null);
+  // const isLoggedIn = sessionStorage.getItem('user');
+  // const [currentUser, setCurrentUser] = useState(null);
 
-  const { logout, loggedIn, setLoggedIn } = useAppContext();
+  // const { logout, loggedIn, setLoggedIn } = useAppContext();
 
-  console.log(isLoggedIn);
+  // console.log(isLoggedIn);
 
-  const { githubusername } = useParams();
+  // const { githubusername } = useParams();
 
-  console.log(githubusername);
+  // console.log(githubusername);
 
-  const getGithubData = async () => {
-    const res = await fetch(`http://localhost:3000/user/${githubusername}`);
+  // const getGithubData = async () => {
+  //   const res = await fetch(`http://localhost:3000/user/${githubusername}`);
 
-    if (res.status === 200) {
-      const data = await res.json();
-      console.log(data);
-      sessionStorage.setItem('user', JSON.stringify(data));
-      setLoggedIn(true);
-      setCurrentUser(data.displayName);
-    }
-  }
+  //   if (res.status === 200) {
+  //     const data = await res.json();
+  //     console.log(data);
+  //     sessionStorage.setItem('user', JSON.stringify(data));
+  //     setLoggedIn(true);
+  //     setCurrentUser(data.displayName);
+  //   }
+  // }
 
-  useEffect(() => {
-    if (githubusername)
-      getGithubData();
-  }, []);
+  // useEffect(() => {
+  //   if (githubusername)
+  //     getGithubData();
+  // }, []);
 
 
-  const showLoginOption = () => {
+  // const showLoginOption = () => {
 
-    if (isLoggedIn) {
-      return (
-        // <button type="submit" className='login-container' >
-        // <div className="dropdown">
-        //   <button className="dropbtn login-container" >{currentUser.}</button>
-        //   <div className="dropdown-content">
-        <button className="login-container btn" style={{ color: 'red' }} onClick={logout} >
-          Logout
-        </button>
-        //   </div>
-        // </div>
-      )
-    }
-    else {
-      return (
-        <Link type="submit" to="/Login" className="login-container btn" >Login
+  //   if (isLoggedIn) {
+  //     return (
+  //       // <button type="submit" className='login-container' >
+  //       // <div className="dropdown">
+  //       //   <button className="dropbtn login-container" >{currentUser.}</button>
+  //       //   <div className="dropdown-content">
+  //       <button className="login-container btn" style={{ color: 'red' }} onClick={logout} >
+  //         Logout
+  //       </button>
+  //       //   </div>
+  //       // </div>
+  //     )
+  //   }
+  //   else {
+  //     return (
+  //       <Link type="submit" to="/Login" className="login-container btn" >Login
 
-        </Link>
-      )
-    }
-  }
+  //       </Link>
+  //     )
+  //   }
+  // }
   return (
     <>
       <header>
@@ -142,7 +142,7 @@ const Home = () => {
             <p style={{ fontSize: '25px' }}>
               Work on Actual Projects with Source Hype's open source projects.
             </p>
-            <div className="hero-content__buttons" style={{marginLeft:'35%'}}>
+            <div className="hero-content__buttons" style={{marginLeft:'30%'}}>
               <Link to="/login">
                 <button className="hero-content__order-button">Login</button>
               </Link>
@@ -261,7 +261,7 @@ const Home = () => {
             <img
               className="popular-foods__card-image"
               src="assets/sushi-10.png"
-              alt="sushi-10"
+              alt="exhibis"
             />
             <h4 className="popular-foods__card-title">Exhibis</h4>
             <div className="popular-foods__card-details flex-between">
