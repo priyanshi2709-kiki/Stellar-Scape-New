@@ -20,107 +20,64 @@ const View = () => {
     
 
   return (
-    <>
-  <link
-    href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-    rel="stylesheet"
-    id="bootstrap-css"
-  />
-  {/*---- Include the above in your HEAD tag --------*/}
-  <div className="container emp-profile">
-    <form method="post">
-      <div className="row">
-        <div className="col-md-4">
-          <div className="profile-img">
-            <img
-              src={"http://localhost:3000/"+ pro.image}
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="col-md-6">
-          <div className="profile-head">
-            <h5>{pro.pname}</h5>
-            <h6>{pro.pinfo}</h6>
-            <p className="proile-rating">
-              RANKINGS : <span>8/10</span>
-            </p>
-            <ul className="nav nav-tabs" id="myTab" role="tablist">
-              <li className="nav-item">
-                <a
-                  className="nav-link active"
-                  id="home-tab"
-                  data-toggle="tab"
-                  href="#home"
-                  role="tab"
-                  aria-controls="home"
-                  aria-selected="true"
-                >
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link"
-                  id="profile-tab"
-                  data-toggle="tab"
-                  href="#profile"
-                  role="tab"
-                  aria-controls="profile"
-                  aria-selected="false"
-                >
-                  Timeline
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="col-md-2">
-          <input
-            type="submit"
-            className="profile-edit-btn"
-            name="btnAddMore"
-            defaultValue="Edit Profile"
-          />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-md-4">
-        </div>
-        <div className="col-md-8">
-          <div className="tab-content profile-tab" id="myTabContent">
-            <div
-              className="tab-pane fade show active"
-              id="home"
-              role="tabpanel"
-              aria-labelledby="home-tab"
-            >
-              <div className="row">
-                <div className="col-md-6">
-                  <label>Project Info</label>
-                </div>
-                <div className="col-md-6">
-                  <p>{pro.pinfo}</p>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-6">
-                  <label>Name</label>
-                </div>
-                <div className="col-md-6">
-                  <p>{pro.pname}</p>
-                </div>
-              </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </form>
-  </div>
-</>
-
     
-  )
+  <>
+  <div className="container">
+    <div className="imgBx">
+      <img
+        src="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto.png?raw=true"
+        alt="Nike Jordan Proto-Lyte Image"
+      />
+    </div>
+    <div className="details">
+      <div className="content">
+        <h2>
+          Jordan Proto-Lyte <br />
+          <span>Running Collection</span>
+        </h2>
+        <p>
+          Featuring soft foam cushioning and lightweight, woven fabric in the
+          upper, the Jordan Proto-Lyte is made for all-day, bouncy comfort.
+          Lightweight Breathability: Lightweight woven fabric with real or
+          synthetic leather provides breathable support. Cushioned Comfort: A
+          full-length foam midsole delivers lightweight, plush cushioning.
+          Secure Traction: Exaggerated herringbone-pattern outsole offers
+          traction on a variety of surfaces.
+        </p>
+        <p className="product-colors">
+          Available Colors:
+          <span
+            className="black active"
+            data-color-primary="#000"
+            data-color-sec="#212121"
+            data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto.png?raw=true"
+          />
+          <span
+            className="red"
+            data-color-primary="#7E021C"
+            data-color-sec="#bd072d"
+            data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_red_black.png?raw=true"
+          />
+          <span
+            className="orange"
+            data-color-primary="#CE5B39"
+            data-color-sec="#F18557"
+            data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_orange_black.png?raw=true"
+          />
+        </p>
+        <h3>Rs. 12,800</h3>
+        <button>Buy Now</button>
+      </div>
+    </div>
+  </div>
+  {/* Footer */}
+  <footer>
+    <a href="https://stylustechnepal.com" target="_blank">
+      anuzbvbmaniac123@gmail.com
+    </a>
+  </footer>
+</>
+)
 }
 
 export default View

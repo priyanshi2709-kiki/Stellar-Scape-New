@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { enqueueSnackbar } from 'notistack';
 import '../components/Signup.css'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.svg'
 const signupSchema = Yup.object().shape({
   name: Yup.string()
     .required('Name is required')
@@ -52,11 +52,11 @@ const Signup = () => {
           <div className="cardleft">
           <form onSubmit={signupForm.handleSubmit}>
             <div className="row justify-content-center my-auto">
-              <div className="col-md-8 col-10 my-5">
+              <div className="col-md-8 col-10 my-5" style={{marginLeft:'-40px', marginRight:'40px'}}>
                 <div className="row justify-content-center px-3 mb-3">
-                  <img src={logo} style={{width:'50%', marginTop: '10px'}} />
+                  <img src={logo} style={{width:'100%', marginTop: '-50px'}} />
                 </div>
-                <h6 className="msg-info">Create a new acccount</h6>
+                <h5 className="msg-info" >Create a new acccount</h5>
                   <div className="form-group fields">
                     <label className="form-control-label text-muted ">Name</label>
                     <span style={{ color: 'red', fontSize: '10', marginLeft: 10 }}>{signupForm.touched.name && signupForm.errors.name}</span>

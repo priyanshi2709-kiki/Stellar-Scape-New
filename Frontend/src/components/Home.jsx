@@ -1,12 +1,33 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useParams } from 'react-router-dom';
-import logo from '../assets/logo.png'
-import HomeBg from '../assets/HomeBg.svg'
-import HomeBg2 from '../assets/HomeBg2.svg'
+import aboutus3 from '../assets/aboutus3.gif'
+import aboutus2 from '../assets/aboutus2.gif'
+import user from '../assets/user.png'
 import useAppContext from '../AppContext';
 import '../components/Home.css'
-
+import docTren from '../assets/docTren.svg'
+import signupbg from '../assets/signupbg.gif'
+import logo from '../assets/logo.svg'
+import hero from '../assets/hero.gif'
+import arrowupright from '../assets/arrowupright.svg'
+import reactLogo from '../assets/reactLogo.png'
+import androidLogo from '../assets/androidLogo.png'
+import kubernetesLogo from '../assets/kubernetesLogo.png'
+import angularLogo from '../assets/angularLogo.png'
+import cLogo from '../assets/cLogo.png'
+import allLogo from '../assets/allLogo.png'
+import corporateLogo from '../assets/corporateLogo.svg'
+import docLogo from '../assets/docLogo.svg'
+import arrowright from '../assets/arrowright.svg'
+import star from '../assets/star.svg'
+import arrowvertical from '../assets/arrowvertical.svg'
+import arrowhorizontal from '../assets/arrowhorizontal.svg'
+import check from '../assets/check.svg'
+import facebook from '../assets/facebook.svg'
+import instagram from '../assets/instagram.svg'
+import twitter from '../assets/twitter.svg'
+import HeroImage from '../assets/HeroImage.svg'
 //import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -76,550 +97,351 @@ const Home = () => {
     }
   }
   return (
-    <div>
-      <div className="row">
-        <img src={'./src/assets/HomeBg.svg'} alt="" className='home-bg' />
-        <div className="" style={{ marginTop: '-500px;' }}>
-          {showLoginOption()}
+    <>
+      <header>
+        <nav className="header__nav" style={{marginBottom:'-35px'}}>
+          <div className="header__logo">
+            
+            <div className="header__logo-overlay " />
+            <img src={logo} alt="logo" style={{width:'20%', marginTop:'-35px', marginLeft:'-10px'}} />
+            <h4 data-aos="fade-down" style={{marginLeft:'-30px', color:'white'}}>Source Hype</h4>
+          </div>
+          <ul className="header__menu" data-aos="fade-down">
+            <li>
+              <Link className="signup" to="/Signup">Sign Up</Link>
+            </li>
+            <li>
+              <a href="#about-us">About Us</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#trending">Trending</a>
+            </li>
+
+            <li>
+              <img src="assets/search.svg" alt="search" />
+            </li>
+          </ul>
+          <ul className="header__menu-mobile" data-aos="fade-down">
+            <li>
+              <img src={hero} alt="hero" />
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section className="hero">
+        <div className="hero-image">
+          <img src={hero} alt="hero" data-aos="fade-up" style={{width:'100%'}} />
+          <div className="hero-image__overlay" />
         </div>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-md-12 d-flex justify-content-center homebg2" style={{ marginTop: '-50px' }}>
-              <img src={HomeBg2} alt="" className='w-100' />
+        <div className="hero-content">
+          <div className="hero-content-info" data-aos="fade-left" >
+            <h1 style={{ fontWeight: '700', marginLeft: '32px' }}>Unlock real learning</h1>
+            <p style={{ fontSize: '25px' }}>
+              Work on Actual Projects with Source Hype's open source projects.
+            </p>
+            <div className="hero-content__buttons" style={{marginLeft:'35%'}}>
+              <Link to="/login">
+                <button className="hero-content__order-button">Login</button>
+              </Link>
+            </div>
+          </div>
+          <div className="hero-content__testimonial" data-aos="fade-up">
+            <div className="hero-content__customer flex-center">
+              <h4>
+                24<span>k+</span>
+              </h4>
+              <p>Hype Contributors</p>
+            </div>
+            <div className="hero-content__review">
+              <img src={user} alt="user" />
+              <p>
+                "Innovative, efficient, collaborative: a project transforming possibilities."
+              </p>
             </div>
           </div>
         </div>
-
-        {/* next section */}
-        <div className="container d-flex justify-content-center align-items-center flex-column">
-          <img src="./src/assets/HomeBg3.svg" alt="" className='w-100' />
-          <div className="row  d-flex justify-content-center align-items-center flex-column">
-            <div className="col-md-8  d-flex  align-items-center flex-column ">
-              <p style={{ marginTop: '-650px', fontSize: '30px' }}>Open source isn't just about sharing code; it's about fostering innovation, empowering individuals, and building communities. By making our project open source, we invite developers, designers, and enthusiasts from all backgrounds to contribute, learn, and grow together. Are you new to open source and want to learn more about some interesting projects that you can contribute to? Join OpenGalaxy where mentors will help guide you on your journey!</p>
-            </div>
-            <div className="row justify-content-center" style={{ width: '200px', marginTop: '-300px' }}>
-              <Link to='/ProjectListing' className="bttn-block btn-color ">View Projects</Link>
-            </div>
+      </section>
+      <section className="about-us" id="about-us">
+        <div className="about-us__image">
+          <div className="about-us__image-sushi3">
+            <img src={aboutus2} alt="collaboration" data-aos="fade-right" style={{marginLeft:'100px',width:'50%', height:'50%'}} />
+          </div>
+          <Link to="/aboutus">
+          <button className="about-us__button">
+            Learn More
+            <img src={arrowupright} alt="learn more" />
+          </button>
+          </Link>
+          <div className="about-us__image-sushi2">
+            <img src={aboutus3} alt="technology" data-aos="fade-right" />
           </div>
         </div>
+        <div className="about-us__content" data-aos="fade-left">
+          <p className="sushi__subtitle" style={{fontSize:'30px', fontWeight:'400', marginTop:'-30px'}}>About Us </p>
+          <h3 className="sushi__title" style={{fontSize:'55px'}}>
+            Our mission is to empower developers & enthusiasts.
+          </h3>
+          <p className="sushi__description">
+          Source Hype is committed to the notion that open source not only provides great technology for developers, but also brings the best out in people. 
+          </p>
 
-        {/*Review Section*/}
-        {/*<div className="containerreview">
-          <div className="row">
-            <div className="col-md-4">
-              <div className="cardrev d-flex mx-auto">
-                <div className="card-image">
-                  <img
-                    className="imgrev-fluid d-flex mx-auto"
-                    src="https://i.imgur.com/3TlwnLF.jpg"
-                  />
-                </div>
-                <div className="cardrev-text">
-                  <div className="cardrev-title">Lorem Ipsum!</div>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                  commodo ligula eget dolor. Aenean massa. Nam quam nunc, blandit vel,
-                  luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
-                  tincidunt tempus Duis leo. Donec sodales sagittis magna
-                </div>
-                <div className="footerrev">
-                  <span id="name">
-                    Micheal Smith
-                    <br />
-                  </span>
-                  <span id="position">
-                    CEO of <a href="#">Google.com</a>
-                  </span>
-                </div>
+        </div>
+      </section>
+      <section className="popular-foods" id="projects">
+        <h2 className="popular-foods__title" data-aos="flip-up" style={{color:'#5271FF'}}>
+          Popular Projects
+        </h2>
+        <div
+          className="popular-foods__filters sushi__hide-scrollbar"
+          data-aos="fade-up"
+        >
+          <Link to="/ProjectListing">
+          <button className="popular-foods__filter-btn">
+          <img src={allLogo} alt="all" />
+          All
+          </button>
+          </Link>
+          <button className="popular-foods__filter-btn">
+            <img src={reactLogo} alt="react" />
+            React
+          </button>
+          <button className="popular-foods__filter-btn">
+            <img src={androidLogo} alt="android" />
+            Android
+          </button>
+          <button className="popular-foods__filter-btn">
+            <img src={kubernetesLogo} alt="kubernetes" />
+            Kubernetes
+          </button>
+          <button className="popular-foods__filter-btn">
+            <img src={angularLogo} alt="angular" />
+            Angular
+          </button>
+          <button className="popular-foods__filter-btn">
+            <img src={cLogo} alt="c" />
+            C
+          </button>
+        </div>
+        <div className="popular-foods__catalogue" data-aos="fade-up">
+          <article className="popular-foods__card">
+            <img
+              className="popular-foods__card-image"
+              src={corporateLogo}
+              alt="corporate"
+            />
+            <h4 className="popular-foods__card-title">Corporate Hub</h4>
+            <button className="popular-foods__filter-btn active">View Project</button>
+            <div className="popular-foods__card-details flex-between">
+              <div className="popular-foods__card-rating">
+                <img src={star} alt="star" />
+                <p>4.9</p>
               </div>
+              <p className="popular-foods__card-price">12k+ </p>
             </div>
-            <div className="col-md-4">
-              <div className="cardrev d-flex mx-auto">
-                <div className="card-image">
-                  <img
-                    className="imgrev-fluid d-flex mx-auto"
-                    src="https://i.imgur.com/Uz4FjGZ.jpg"
-                  />
-                </div>
-                <div className="cardrev-text">
-                  <div className="cardrev-title">Lorem Ipsum!</div>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                  commodo ligula eget dolor. Aenean massa. Nam quam nunc, blandit vel,
-                  luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
-                  tincidunt tempus Duis leo. Donec sodales sagittis magna
-                </div>
-                <div className="footerrev">
-                  <span id="name">
-                    Angellia Miller
-                    <br />
-                  </span>
-                  <span id="position">
-                    CEO of <a href="#">Facebook.com</a>
-                  </span>
-                </div>
+          </article>
+          <article className="popular-foods__card active-card">
+            <img
+              className="popular-foods__card-image"
+              src={docLogo}
+              alt="doc"
+            />
+            <h4 className="popular-foods__card-title">Quick Doc Finder</h4>
+            <div className="popular-foods__card-details flex-between">
+              <div className="popular-foods__card-rating">
+                <img src={star} alt="star" />
+                <p>5.0</p>
               </div>
+              <p className="popular-foods__card-price">21k+</p>
             </div>
-            <div className="col-md-4">
-              <div className="cardrev d-flex mx-auto ">
-                <div className="cardrev-image">
-                  <img
-                    className="imgrev-fluid d-flex mx-auto"
-                    src="https://i.imgur.com/udGH5tO.jpg"
-                  />
-                </div>
-                <div className="cardrev-text">
-                  <div className="cardrev-title">Lorem Ipsum!</div>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                  commodo ligula eget dolor. Aenean massa. Nam quam nunc, blandit vel,
-                  luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
-                  tincidunt tempus Duis leo. Donec sodales sagittis magna
-                </div>
-                <div className="footerrev">
-                  <span id="name">
-                    Christina Williams
-                    <br />
-                  </span>
-                  <span id="position">
-                    UX Designer at <a href="#">Youtube.com</a>
-                  </span>
-                </div>
+          </article>
+          <article className="popular-foods__card">
+            <img
+              className="popular-foods__card-image"
+              src="assets/sushi-10.png"
+              alt="sushi-10"
+            />
+            <h4 className="popular-foods__card-title">Exhibis</h4>
+            <div className="popular-foods__card-details flex-between">
+              <div className="popular-foods__card-rating">
+              <img src={star} alt="star" />
+                <p>4.7</p>
               </div>
+              <p className="popular-foods__card-price">13k+</p>
+            </div>
+          </article>
+        </div>
+        <Link to='/ProjectListing'>
+        <button className="popular-foods__button" style={{marginLeft:'40%'}}>
+          Explore Projects
+          <img src={arrowright}alt="arrow-right" />
+        </button>
+        </Link>
+      </section>
+      <section className="trending" id="trending">
+        <section className="trending-sushi">
+          <div className="trending__content" data-aos="fade-right">
+            <p className="sushi__subtitle">What’s Trending?</p>
+            <h3 className="sushi__title">Quick-Doc Finder</h3>
+            <p className="sushi__description">
+            "Your Health, Simplified. Anytime, Anywhere."
+            </p>
+            <ul className="trending__list flex-between">
+              <li>
+                <div className="trending__icon flex-center">
+                  <img src={check} alt="check" />
+                </div>
+                <p>Book a Doctor</p>
+              </li>
+              <li>
+                <div className="trending__icon flex-center">
+                  <img src={check} alt="check" />
+                </div>
+                <p>Choose your preferance</p>
+              </li>
+              <li>
+                <div className="trending__icon flex-center">
+                  <img src={check} alt="check" />
+                </div>
+                <p>Track doctor</p>
+              </li>
+              <li>
+                <div className="trending__icon flex-center">
+                  <img src={check} alt="check" />
+                </div>
+                <p>Quick service</p>
+              </li>
+              <li>
+                <div className="trending__icon flex-center">
+                  <img src={check} alt="check" />
+                </div>
+                <p>Easy payments</p>
+              </li>
+              <li>
+                <div className="trending__icon flex-center">
+                  <img src={check} alt="check" />
+                </div>
+                <p>Book a doctor</p>
+              </li>
+            </ul>
+          </div>
+          <div className="trending__image flex-center">
+            <img src={docTren} alt="doc" data-aos="fade-left" style={{backgroundSize:'cover', width:'100%'}}/>
+            <div className="trending__arrow trending__arrow-left">
+              <img src={arrowvertical} alt="arrow vertical" />
+            </div>
+            <div className="trending__arrow trending__arrow-bottom">
+              <img src={arrowhorizontal}  style={{marginTop:'10px'}}  alt="arrow horizontal" />
             </div>
           </div>
-  </div>*/}
-
-        {/* next section */}
-        <div className="container" style={{ marginBottom: '150px'}}>
-          <img src="./src/assets/HomeBg4.svg" alt="" className='w-100' />
-          <div className="col-md-8  d-flex  align-items-center flex-column" style={{ marginTop: '-700px', marginLeft: '200px' }}>
-            <p className="text-center fs-5 mt-4 mb-5"> We pair fun, educational curriculum with real-world practical experience.<br /> It's collaborative, remote, & happens under the guidance of expert mentors.</p> <br />
-          </div>
-          <div className="section_our_solution">
-            <div className="row">
-              <div className="col-lg-12 col-md-12 col-sm-12">
-                <div className="our_solution_category">
-                  <div className="solution_cards_box">
-                    <div className="solution_card">
-                      <div className="hover_color_bubble" />
-                      <div className="so_top_icon">
-                        <svg
-                          id="Layer_1"
-                          enableBackground="new 0 0 512 512"
-                          height={50}
-                          viewBox="0 0 512 512"
-                          width={40}
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <g>
-                            <g>
-                              <g>
-                                <g>
-                                  <path
-                                    d="m47.478 452.317 295.441 19.76c5.511.369 10.277-3.8 10.645-9.31l28.393-424.517c.369-5.511-3.8-10.276-9.31-10.645l-295.441-19.76c-5.511-.369-10.276 3.8-10.645 9.31l-28.394 424.517c-.368 5.511 3.8 10.277 9.311 10.645z"
-                                    fill="#fae19e"
-                                  />
-                                </g>
-                                <g>
-                                  <g>
-                                    <g>
-                                      <g>
-                                        <g>
-                                          <path
-                                            d="m17.5 504.177h226.14l79.96-79.605v-355.86c0-5.523-4.477-10-10-10h-296.1c-5.523 0-10 4.477-10 10v425.466c0 5.522 4.477 9.999 10 9.999z"
-                                            fill="#fff9e9"
-                                          />
-                                        </g>
-                                        <path
-                                          d="m313.601 58.712h-40c5.523 0 10 4.477 10 10v355.861l-.258 40.078 40.258-40.078v-355.861c0-5.523-4.477-10-10-10z"
-                                          fill="#fff4d6"
-                                        />
-                                      </g>
-                                    </g>
-                                  </g>
-                                  <path
-                                    d="m243.64 504.177v-70.253c0-5.523 4.477-10 10-10h69.96z"
-                                    fill="#ffeec2"
-                                  />
-                                </g>
-                              </g>
-                              <g>
-                                <path
-                                  d="m468.636 248.58-33.372.165v-50.826c0-9.183 7.463-16.662 16.673-16.708h.007c9.217-.046 16.693 7.371 16.693 16.562v50.807z"
-                                  fill="#fed23a"
-                                />
-                                <path
-                                  d="m451.96 504.177c-10.362-10.277-16.196-24.263-16.208-38.857l-.062-73.973c0-.644.524-1.169 1.171-1.173l30.038-.149c.647-.003 1.171.517 1.171 1.161l.062 74.079c.012 14.531-5.749 28.472-16.015 38.756z"
-                                  fill="#54b1ff"
-                                />
-                                <path
-                                  d="m451.959 469.333h-.01c-14.434.072-26.14-11.542-26.14-25.935v-213.527c0-6.778 5.477-12.283 12.255-12.316l27.626-.137c6.826-.034 12.378 5.49 12.378 12.316v213.436c0 14.38-11.687 26.091-26.109 26.163z"
-                                  fill="#fdf385"
-                                />
-                                <path
-                                  d="m465.69 217.417-23.769.118c6.037.79 10.708 5.94 10.708 12.198v213.437c0 9.823-5.455 18.397-13.507 22.87 3.79 2.115 8.164 3.317 12.826 3.293h.01c14.422-.072 26.109-11.783 26.109-26.163v-213.436c.001-6.826-5.551-12.351-12.377-12.317z"
-                                  fill="#faee6e"
-                                />
-                                <path
-                                  d="m491.274 247.925-71.615.355c-7.305.036-13.226 5.968-13.226 13.248 0 7.281 5.921 13.153 13.226 13.117l58.389-.29v77.489c0 7.281 5.921 13.153 13.226 13.117 7.305-.036 13.226-5.968 13.226-13.248v-90.672c0-7.28-5.922-13.152-13.226-13.116z"
-                                  fill="#54b1ff"
-                                />
-                                <g>
-                                  <path
-                                    d="m491.274 247.925-38.441.188-.167 26.311 25.381-.067v77.489c0 7.281 5.921 13.153 13.226 13.117 7.305-.036 13.226-5.968 13.226-13.248v-90.672c.001-7.282-5.921-13.154-13.225-13.118z"
-                                    fill="#3da7ff"
-                                  />
-                                </g>
-                              </g>
-                            </g>
-                            <g fill="#060606">
-                              <path d="m373.147 20.122-295.44-19.761c-9.631-.638-17.984 6.665-18.629 16.293l-2.311 34.557h-39.267c-9.649 0-17.5 7.851-17.5 17.5v425.466c0 9.649 7.851 17.5 17.5 17.5h226.141c1.96 0 3.902-.801 5.292-2.185l34.138-33.987c.347.074.701.133 1.065.157l58.282 3.898c9.302.614 18.005-6.952 18.629-16.293l28.393-424.515c.639-9.528-6.766-17.993-16.293-18.63zm-122.006 465.902v-52.1c0-1.378 1.122-2.5 2.5-2.5h51.9zm94.939-23.757c-.244 1.51-1.131 2.286-2.66 2.327l-46.28-3.096 31.752-31.611c1.414-1.407 2.209-3.32 2.209-5.315v-355.86c0-9.649-7.851-17.5-17.5-17.5h-77.993c-9.697 0-9.697 15 0 15h77.993c1.379 0 2.5 1.122 2.5 2.5v347.712h-62.46c-9.649 0-17.5 7.851-17.5 17.5v62.753h-218.641c-1.378 0-2.5-1.122-2.5-2.5v-425.465c0-1.378 1.122-2.5 2.5-2.5h178.168c9.697 0 9.697-15 0-15h-123.868l2.244-33.556c.244-1.511 1.131-2.286 2.661-2.327l295.44 19.76c1.511.244 2.287 1.131 2.328 2.661z" />
-                              <path d="m267.827 237.047h-204.553c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z" />
-                              <path d="m267.827 289.332h-204.553c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z" />
-                              <path d="m55.774 192.262c0 4.142 3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-204.553c-4.142 0-7.5 3.358-7.5 7.5z" />
-                              <path d="m91.807 139.977c0 4.142 3.358 7.5 7.5 7.5h132.487c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-132.487c-4.142 0-7.5 3.358-7.5 7.5z" />
-                              <path d="m194.755 438.787c-13.489.036-26.978.065-40.467.086-4.534.007-9.067.013-13.6.016-8.215.006-13.75-1.643-15.59-10.679-1.556-7.64-12.364-6.613-14.464 0-5.19 16.337-13.774 9.936-18.582-1.053-4.797-10.963-6.027-23.233-8.122-34.9-1.54-8.573-14.506-6.17-14.732 1.994-.298 10.751-1.302 21.331-4.031 31.758-2.815 10.758-7.034 21.097-11.222 31.376-3.651 8.961 10.867 12.816 14.464 3.988 3.711-9.108 7.427-18.266 10.193-27.714 5.14 12.36 15.774 26.34 30.927 18.101 2.819-1.533 5.452-3.712 7.763-6.253 7.88 9.106 19.609 8.388 30.584 8.375 15.627-.02 31.254-.054 46.881-.095 9.649-.025 9.667-15.025-.002-15z" />
-                              <path d="m505.932 246.439c-3.897-3.878-9.255-5.867-14.695-6.014l-5.668.028v-10.719c0-6.529-3.878-13.427-9.433-16.862v-15.098c0-31.069-48.372-30.934-48.372.146v15.1c-5.659 3.498-9.455 9.741-9.455 16.852v10.982c-24.966 1.7-25.037 39.745.028 41.232.16 33.575.152 66.6-.028 100.737-.049 9.414 14.949 9.966 15 .079.18-34.166.188-67.22.029-100.823l37.211-.185s-.048 110.848-.048 160.784c0 24.338-37.219 24.5-37.219-.253l.013-13.677c.585-9.68-14.387-10.583-14.973-.904v12.834c0 11 3.402 20.316 9.988 26.869.586 15.693 7.198 30.878 18.369 41.956 3.205 3.18 7.642 2.208 10.744-.182 11.365-11.385 17.769-26.394 18.169-42.414 4.951-4.931 9.908-9.896 9.908-26.896l.006-68.351c12.97 3.689 26.494-6.348 26.494-19.946v-90.672c0-5.523-2.155-10.709-6.068-14.603zm-72.623-5.727v-10.841c0-2.219 1.523-4.08 3.573-4.633l30.025-.149c.84.208 1.615.605 2.243 1.231.915.911 1.419 2.123 1.419 3.414v10.794zm18.671-52c4.604 0 9.155 4.514 9.155 9.062v12.166l-18.372.091v-12.111c.001-5.053 4.133-9.183 9.217-9.208zm-.011 303.901c-3.487-4.942-6.009-10.531-7.417-16.406 2.322.503 4.674.765 7.027.765 2.627 0 5.253-.326 7.839-.957-1.374 5.964-3.892 11.587-7.449 16.598zm45.031-140.899c0 7.101-11.452 7.66-11.452.131 0 0 .013-70.974.021-77.48.005-4.196-3.483-7.509-7.558-7.509l-58.389.29c-7.242 0-7.073-11.331.074-11.366l71.615-.355c3.463.295 5.359 2.168 5.688 5.617v90.672z" />
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                      <div className="solu_title">
-                        <h3>Real World Experiences</h3>
-                      </div>
-                      <div className="solu_description">
-                        <p>
-                        Students gain practical, applicable experience by working on real-world projects.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="solution_card">
-                      <div className="hover_color_bubble" />
-                      <div className="so_top_icon">
-                        <svg
-                          id="Layer_1"
-                          enableBackground="new 0 0 512 512"
-                          height={50}
-                          viewBox="0 0 512 512"
-                          width={40}
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <g>
-                            <g>
-                              <g>
-                                <g>
-                                  <path
-                                    d="m47.478 452.317 295.441 19.76c5.511.369 10.277-3.8 10.645-9.31l28.393-424.517c.369-5.511-3.8-10.276-9.31-10.645l-295.441-19.76c-5.511-.369-10.276 3.8-10.645 9.31l-28.394 424.517c-.368 5.511 3.8 10.277 9.311 10.645z"
-                                    fill="#fae19e"
-                                  />
-                                </g>
-                                <g>
-                                  <g>
-                                    <g>
-                                      <g>
-                                        <g>
-                                          <path
-                                            d="m17.5 504.177h226.14l79.96-79.605v-355.86c0-5.523-4.477-10-10-10h-296.1c-5.523 0-10 4.477-10 10v425.466c0 5.522 4.477 9.999 10 9.999z"
-                                            fill="#fff9e9"
-                                          />
-                                        </g>
-                                        <path
-                                          d="m313.601 58.712h-40c5.523 0 10 4.477 10 10v355.861l-.258 40.078 40.258-40.078v-355.861c0-5.523-4.477-10-10-10z"
-                                          fill="#fff4d6"
-                                        />
-                                      </g>
-                                    </g>
-                                  </g>
-                                  <path
-                                    d="m243.64 504.177v-70.253c0-5.523 4.477-10 10-10h69.96z"
-                                    fill="#ffeec2"
-                                  />
-                                </g>
-                              </g>
-                              <g>
-                                <path
-                                  d="m468.636 248.58-33.372.165v-50.826c0-9.183 7.463-16.662 16.673-16.708h.007c9.217-.046 16.693 7.371 16.693 16.562v50.807z"
-                                  fill="#fed23a"
-                                />
-                                <path
-                                  d="m451.96 504.177c-10.362-10.277-16.196-24.263-16.208-38.857l-.062-73.973c0-.644.524-1.169 1.171-1.173l30.038-.149c.647-.003 1.171.517 1.171 1.161l.062 74.079c.012 14.531-5.749 28.472-16.015 38.756z"
-                                  fill="#54b1ff"
-                                />
-                                <path
-                                  d="m451.959 469.333h-.01c-14.434.072-26.14-11.542-26.14-25.935v-213.527c0-6.778 5.477-12.283 12.255-12.316l27.626-.137c6.826-.034 12.378 5.49 12.378 12.316v213.436c0 14.38-11.687 26.091-26.109 26.163z"
-                                  fill="#fdf385"
-                                />
-                                <path
-                                  d="m465.69 217.417-23.769.118c6.037.79 10.708 5.94 10.708 12.198v213.437c0 9.823-5.455 18.397-13.507 22.87 3.79 2.115 8.164 3.317 12.826 3.293h.01c14.422-.072 26.109-11.783 26.109-26.163v-213.436c.001-6.826-5.551-12.351-12.377-12.317z"
-                                  fill="#faee6e"
-                                />
-                                <path
-                                  d="m491.274 247.925-71.615.355c-7.305.036-13.226 5.968-13.226 13.248 0 7.281 5.921 13.153 13.226 13.117l58.389-.29v77.489c0 7.281 5.921 13.153 13.226 13.117 7.305-.036 13.226-5.968 13.226-13.248v-90.672c0-7.28-5.922-13.152-13.226-13.116z"
-                                  fill="#54b1ff"
-                                />
-                                <g>
-                                  <path
-                                    d="m491.274 247.925-38.441.188-.167 26.311 25.381-.067v77.489c0 7.281 5.921 13.153 13.226 13.117 7.305-.036 13.226-5.968 13.226-13.248v-90.672c.001-7.282-5.921-13.154-13.225-13.118z"
-                                    fill="#3da7ff"
-                                  />
-                                </g>
-                              </g>
-                            </g>
-                            <g fill="#060606">
-                              <path d="m373.147 20.122-295.44-19.761c-9.631-.638-17.984 6.665-18.629 16.293l-2.311 34.557h-39.267c-9.649 0-17.5 7.851-17.5 17.5v425.466c0 9.649 7.851 17.5 17.5 17.5h226.141c1.96 0 3.902-.801 5.292-2.185l34.138-33.987c.347.074.701.133 1.065.157l58.282 3.898c9.302.614 18.005-6.952 18.629-16.293l28.393-424.515c.639-9.528-6.766-17.993-16.293-18.63zm-122.006 465.902v-52.1c0-1.378 1.122-2.5 2.5-2.5h51.9zm94.939-23.757c-.244 1.51-1.131 2.286-2.66 2.327l-46.28-3.096 31.752-31.611c1.414-1.407 2.209-3.32 2.209-5.315v-355.86c0-9.649-7.851-17.5-17.5-17.5h-77.993c-9.697 0-9.697 15 0 15h77.993c1.379 0 2.5 1.122 2.5 2.5v347.712h-62.46c-9.649 0-17.5 7.851-17.5 17.5v62.753h-218.641c-1.378 0-2.5-1.122-2.5-2.5v-425.465c0-1.378 1.122-2.5 2.5-2.5h178.168c9.697 0 9.697-15 0-15h-123.868l2.244-33.556c.244-1.511 1.131-2.286 2.661-2.327l295.44 19.76c1.511.244 2.287 1.131 2.328 2.661z" />
-                              <path d="m267.827 237.047h-204.553c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z" />
-                              <path d="m267.827 289.332h-204.553c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z" />
-                              <path d="m55.774 192.262c0 4.142 3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-204.553c-4.142 0-7.5 3.358-7.5 7.5z" />
-                              <path d="m91.807 139.977c0 4.142 3.358 7.5 7.5 7.5h132.487c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-132.487c-4.142 0-7.5 3.358-7.5 7.5z" />
-                              <path d="m194.755 438.787c-13.489.036-26.978.065-40.467.086-4.534.007-9.067.013-13.6.016-8.215.006-13.75-1.643-15.59-10.679-1.556-7.64-12.364-6.613-14.464 0-5.19 16.337-13.774 9.936-18.582-1.053-4.797-10.963-6.027-23.233-8.122-34.9-1.54-8.573-14.506-6.17-14.732 1.994-.298 10.751-1.302 21.331-4.031 31.758-2.815 10.758-7.034 21.097-11.222 31.376-3.651 8.961 10.867 12.816 14.464 3.988 3.711-9.108 7.427-18.266 10.193-27.714 5.14 12.36 15.774 26.34 30.927 18.101 2.819-1.533 5.452-3.712 7.763-6.253 7.88 9.106 19.609 8.388 30.584 8.375 15.627-.02 31.254-.054 46.881-.095 9.649-.025 9.667-15.025-.002-15z" />
-                              <path d="m505.932 246.439c-3.897-3.878-9.255-5.867-14.695-6.014l-5.668.028v-10.719c0-6.529-3.878-13.427-9.433-16.862v-15.098c0-31.069-48.372-30.934-48.372.146v15.1c-5.659 3.498-9.455 9.741-9.455 16.852v10.982c-24.966 1.7-25.037 39.745.028 41.232.16 33.575.152 66.6-.028 100.737-.049 9.414 14.949 9.966 15 .079.18-34.166.188-67.22.029-100.823l37.211-.185s-.048 110.848-.048 160.784c0 24.338-37.219 24.5-37.219-.253l.013-13.677c.585-9.68-14.387-10.583-14.973-.904v12.834c0 11 3.402 20.316 9.988 26.869.586 15.693 7.198 30.878 18.369 41.956 3.205 3.18 7.642 2.208 10.744-.182 11.365-11.385 17.769-26.394 18.169-42.414 4.951-4.931 9.908-9.896 9.908-26.896l.006-68.351c12.97 3.689 26.494-6.348 26.494-19.946v-90.672c0-5.523-2.155-10.709-6.068-14.603zm-72.623-5.727v-10.841c0-2.219 1.523-4.08 3.573-4.633l30.025-.149c.84.208 1.615.605 2.243 1.231.915.911 1.419 2.123 1.419 3.414v10.794zm18.671-52c4.604 0 9.155 4.514 9.155 9.062v12.166l-18.372.091v-12.111c.001-5.053 4.133-9.183 9.217-9.208zm-.011 303.901c-3.487-4.942-6.009-10.531-7.417-16.406 2.322.503 4.674.765 7.027.765 2.627 0 5.253-.326 7.839-.957-1.374 5.964-3.892 11.587-7.449 16.598zm45.031-140.899c0 7.101-11.452 7.66-11.452.131 0 0 .013-70.974.021-77.48.005-4.196-3.483-7.509-7.558-7.509l-58.389.29c-7.242 0-7.073-11.331.074-11.366l71.615-.355c3.463.295 5.359 2.168 5.688 5.617v90.672z" />
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                      <div className="solu_title">
-                        <h3>Contribution to meaningful projects</h3>
-                      </div>
-                      <div className="solu_description">
-                        <p>
-                        Contribute to projects with a positive societal impact.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  {/*  */}
-                  <div className="solution_cards_box sol_card_top_3">
-                    <div className="solution_card">
-                      <div className="hover_color_bubble" />
-                      <div className="so_top_icon">
-                        <svg
-                          id="Layer_1"
-                          enableBackground="new 0 0 512 512"
-                          height={50}
-                          viewBox="0 0 512 512"
-                          width={40}
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <g>
-                            <g>
-                              <g>
-                                <g>
-                                  <path
-                                    d="m47.478 452.317 295.441 19.76c5.511.369 10.277-3.8 10.645-9.31l28.393-424.517c.369-5.511-3.8-10.276-9.31-10.645l-295.441-19.76c-5.511-.369-10.276 3.8-10.645 9.31l-28.394 424.517c-.368 5.511 3.8 10.277 9.311 10.645z"
-                                    fill="#fae19e"
-                                  />
-                                </g>
-                                <g>
-                                  <g>
-                                    <g>
-                                      <g>
-                                        <g>
-                                          <path
-                                            d="m17.5 504.177h226.14l79.96-79.605v-355.86c0-5.523-4.477-10-10-10h-296.1c-5.523 0-10 4.477-10 10v425.466c0 5.522 4.477 9.999 10 9.999z"
-                                            fill="#fff9e9"
-                                          />
-                                        </g>
-                                        <path
-                                          d="m313.601 58.712h-40c5.523 0 10 4.477 10 10v355.861l-.258 40.078 40.258-40.078v-355.861c0-5.523-4.477-10-10-10z"
-                                          fill="#fff4d6"
-                                        />
-                                      </g>
-                                    </g>
-                                  </g>
-                                  <path
-                                    d="m243.64 504.177v-70.253c0-5.523 4.477-10 10-10h69.96z"
-                                    fill="#ffeec2"
-                                  />
-                                </g>
-                              </g>
-                              <g>
-                                <path
-                                  d="m468.636 248.58-33.372.165v-50.826c0-9.183 7.463-16.662 16.673-16.708h.007c9.217-.046 16.693 7.371 16.693 16.562v50.807z"
-                                  fill="#fed23a"
-                                />
-                                <path
-                                  d="m451.96 504.177c-10.362-10.277-16.196-24.263-16.208-38.857l-.062-73.973c0-.644.524-1.169 1.171-1.173l30.038-.149c.647-.003 1.171.517 1.171 1.161l.062 74.079c.012 14.531-5.749 28.472-16.015 38.756z"
-                                  fill="#54b1ff"
-                                />
-                                <path
-                                  d="m451.959 469.333h-.01c-14.434.072-26.14-11.542-26.14-25.935v-213.527c0-6.778 5.477-12.283 12.255-12.316l27.626-.137c6.826-.034 12.378 5.49 12.378 12.316v213.436c0 14.38-11.687 26.091-26.109 26.163z"
-                                  fill="#fdf385"
-                                />
-                                <path
-                                  d="m465.69 217.417-23.769.118c6.037.79 10.708 5.94 10.708 12.198v213.437c0 9.823-5.455 18.397-13.507 22.87 3.79 2.115 8.164 3.317 12.826 3.293h.01c14.422-.072 26.109-11.783 26.109-26.163v-213.436c.001-6.826-5.551-12.351-12.377-12.317z"
-                                  fill="#faee6e"
-                                />
-                                <path
-                                  d="m491.274 247.925-71.615.355c-7.305.036-13.226 5.968-13.226 13.248 0 7.281 5.921 13.153 13.226 13.117l58.389-.29v77.489c0 7.281 5.921 13.153 13.226 13.117 7.305-.036 13.226-5.968 13.226-13.248v-90.672c0-7.28-5.922-13.152-13.226-13.116z"
-                                  fill="#54b1ff"
-                                />
-                                <g>
-                                  <path
-                                    d="m491.274 247.925-38.441.188-.167 26.311 25.381-.067v77.489c0 7.281 5.921 13.153 13.226 13.117 7.305-.036 13.226-5.968 13.226-13.248v-90.672c.001-7.282-5.921-13.154-13.225-13.118z"
-                                    fill="#3da7ff"
-                                  />
-                                </g>
-                              </g>
-                            </g>
-                            <g fill="#060606">
-                              <path d="m373.147 20.122-295.44-19.761c-9.631-.638-17.984 6.665-18.629 16.293l-2.311 34.557h-39.267c-9.649 0-17.5 7.851-17.5 17.5v425.466c0 9.649 7.851 17.5 17.5 17.5h226.141c1.96 0 3.902-.801 5.292-2.185l34.138-33.987c.347.074.701.133 1.065.157l58.282 3.898c9.302.614 18.005-6.952 18.629-16.293l28.393-424.515c.639-9.528-6.766-17.993-16.293-18.63zm-122.006 465.902v-52.1c0-1.378 1.122-2.5 2.5-2.5h51.9zm94.939-23.757c-.244 1.51-1.131 2.286-2.66 2.327l-46.28-3.096 31.752-31.611c1.414-1.407 2.209-3.32 2.209-5.315v-355.86c0-9.649-7.851-17.5-17.5-17.5h-77.993c-9.697 0-9.697 15 0 15h77.993c1.379 0 2.5 1.122 2.5 2.5v347.712h-62.46c-9.649 0-17.5 7.851-17.5 17.5v62.753h-218.641c-1.378 0-2.5-1.122-2.5-2.5v-425.465c0-1.378 1.122-2.5 2.5-2.5h178.168c9.697 0 9.697-15 0-15h-123.868l2.244-33.556c.244-1.511 1.131-2.286 2.661-2.327l295.44 19.76c1.511.244 2.287 1.131 2.328 2.661z" />
-                              <path d="m267.827 237.047h-204.553c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z" />
-                              <path d="m267.827 289.332h-204.553c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z" />
-                              <path d="m55.774 192.262c0 4.142 3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-204.553c-4.142 0-7.5 3.358-7.5 7.5z" />
-                              <path d="m91.807 139.977c0 4.142 3.358 7.5 7.5 7.5h132.487c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-132.487c-4.142 0-7.5 3.358-7.5 7.5z" />
-                              <path d="m194.755 438.787c-13.489.036-26.978.065-40.467.086-4.534.007-9.067.013-13.6.016-8.215.006-13.75-1.643-15.59-10.679-1.556-7.64-12.364-6.613-14.464 0-5.19 16.337-13.774 9.936-18.582-1.053-4.797-10.963-6.027-23.233-8.122-34.9-1.54-8.573-14.506-6.17-14.732 1.994-.298 10.751-1.302 21.331-4.031 31.758-2.815 10.758-7.034 21.097-11.222 31.376-3.651 8.961 10.867 12.816 14.464 3.988 3.711-9.108 7.427-18.266 10.193-27.714 5.14 12.36 15.774 26.34 30.927 18.101 2.819-1.533 5.452-3.712 7.763-6.253 7.88 9.106 19.609 8.388 30.584 8.375 15.627-.02 31.254-.054 46.881-.095 9.649-.025 9.667-15.025-.002-15z" />
-                              <path d="m505.932 246.439c-3.897-3.878-9.255-5.867-14.695-6.014l-5.668.028v-10.719c0-6.529-3.878-13.427-9.433-16.862v-15.098c0-31.069-48.372-30.934-48.372.146v15.1c-5.659 3.498-9.455 9.741-9.455 16.852v10.982c-24.966 1.7-25.037 39.745.028 41.232.16 33.575.152 66.6-.028 100.737-.049 9.414 14.949 9.966 15 .079.18-34.166.188-67.22.029-100.823l37.211-.185s-.048 110.848-.048 160.784c0 24.338-37.219 24.5-37.219-.253l.013-13.677c.585-9.68-14.387-10.583-14.973-.904v12.834c0 11 3.402 20.316 9.988 26.869.586 15.693 7.198 30.878 18.369 41.956 3.205 3.18 7.642 2.208 10.744-.182 11.365-11.385 17.769-26.394 18.169-42.414 4.951-4.931 9.908-9.896 9.908-26.896l.006-68.351c12.97 3.689 26.494-6.348 26.494-19.946v-90.672c0-5.523-2.155-10.709-6.068-14.603zm-72.623-5.727v-10.841c0-2.219 1.523-4.08 3.573-4.633l30.025-.149c.84.208 1.615.605 2.243 1.231.915.911 1.419 2.123 1.419 3.414v10.794zm18.671-52c4.604 0 9.155 4.514 9.155 9.062v12.166l-18.372.091v-12.111c.001-5.053 4.133-9.183 9.217-9.208zm-.011 303.901c-3.487-4.942-6.009-10.531-7.417-16.406 2.322.503 4.674.765 7.027.765 2.627 0 5.253-.326 7.839-.957-1.374 5.964-3.892 11.587-7.449 16.598zm45.031-140.899c0 7.101-11.452 7.66-11.452.131 0 0 .013-70.974.021-77.48.005-4.196-3.483-7.509-7.558-7.509l-58.389.29c-7.242 0-7.073-11.331.074-11.366l71.615-.355c3.463.295 5.359 2.168 5.688 5.617v90.672z" />
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                      <div className="solu_title">
-                        <h3>Portfolio Building</h3>
-                      </div>
-                      <div className="solu_description">
-                        <p>
-                        Contributions become tangible evidence in a student's portfolio.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="solution_card">
-                      <div className="hover_color_bubble" />
-                      <div className="so_top_icon">
-                        <svg
-                          id="Layer_1"
-                          enableBackground="new 0 0 512 512"
-                          height={50}
-                          viewBox="0 0 512 512"
-                          width={40}
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <g>
-                            <g>
-                              <g>
-                                <g>
-                                  <path
-                                    d="m47.478 452.317 295.441 19.76c5.511.369 10.277-3.8 10.645-9.31l28.393-424.517c.369-5.511-3.8-10.276-9.31-10.645l-295.441-19.76c-5.511-.369-10.276 3.8-10.645 9.31l-28.394 424.517c-.368 5.511 3.8 10.277 9.311 10.645z"
-                                    fill="#fae19e"
-                                  />
-                                </g>
-                                <g>
-                                  <g>
-                                    <g>
-                                      <g>
-                                        <g>
-                                          <path
-                                            d="m17.5 504.177h226.14l79.96-79.605v-355.86c0-5.523-4.477-10-10-10h-296.1c-5.523 0-10 4.477-10 10v425.466c0 5.522 4.477 9.999 10 9.999z"
-                                            fill="#fff9e9"
-                                          />
-                                        </g>
-                                        <path
-                                          d="m313.601 58.712h-40c5.523 0 10 4.477 10 10v355.861l-.258 40.078 40.258-40.078v-355.861c0-5.523-4.477-10-10-10z"
-                                          fill="#fff4d6"
-                                        />
-                                      </g>
-                                    </g>
-                                  </g>
-                                  <path
-                                    d="m243.64 504.177v-70.253c0-5.523 4.477-10 10-10h69.96z"
-                                    fill="#ffeec2"
-                                  />
-                                </g>
-                              </g>
-                              <g>
-                                <path
-                                  d="m468.636 248.58-33.372.165v-50.826c0-9.183 7.463-16.662 16.673-16.708h.007c9.217-.046 16.693 7.371 16.693 16.562v50.807z"
-                                  fill="#fed23a"
-                                />
-                                <path
-                                  d="m451.96 504.177c-10.362-10.277-16.196-24.263-16.208-38.857l-.062-73.973c0-.644.524-1.169 1.171-1.173l30.038-.149c.647-.003 1.171.517 1.171 1.161l.062 74.079c.012 14.531-5.749 28.472-16.015 38.756z"
-                                  fill="#54b1ff"
-                                />
-                                <path
-                                  d="m451.959 469.333h-.01c-14.434.072-26.14-11.542-26.14-25.935v-213.527c0-6.778 5.477-12.283 12.255-12.316l27.626-.137c6.826-.034 12.378 5.49 12.378 12.316v213.436c0 14.38-11.687 26.091-26.109 26.163z"
-                                  fill="#fdf385"
-                                />
-                                <path
-                                  d="m465.69 217.417-23.769.118c6.037.79 10.708 5.94 10.708 12.198v213.437c0 9.823-5.455 18.397-13.507 22.87 3.79 2.115 8.164 3.317 12.826 3.293h.01c14.422-.072 26.109-11.783 26.109-26.163v-213.436c.001-6.826-5.551-12.351-12.377-12.317z"
-                                  fill="#faee6e"
-                                />
-                                <path
-                                  d="m491.274 247.925-71.615.355c-7.305.036-13.226 5.968-13.226 13.248 0 7.281 5.921 13.153 13.226 13.117l58.389-.29v77.489c0 7.281 5.921 13.153 13.226 13.117 7.305-.036 13.226-5.968 13.226-13.248v-90.672c0-7.28-5.922-13.152-13.226-13.116z"
-                                  fill="#54b1ff"
-                                />
-                                <g>
-                                  <path
-                                    d="m491.274 247.925-38.441.188-.167 26.311 25.381-.067v77.489c0 7.281 5.921 13.153 13.226 13.117 7.305-.036 13.226-5.968 13.226-13.248v-90.672c.001-7.282-5.921-13.154-13.225-13.118z"
-                                    fill="#3da7ff"
-                                  />
-                                </g>
-                              </g>
-                            </g>
-                            <g fill="#060606">
-                              <path d="m373.147 20.122-295.44-19.761c-9.631-.638-17.984 6.665-18.629 16.293l-2.311 34.557h-39.267c-9.649 0-17.5 7.851-17.5 17.5v425.466c0 9.649 7.851 17.5 17.5 17.5h226.141c1.96 0 3.902-.801 5.292-2.185l34.138-33.987c.347.074.701.133 1.065.157l58.282 3.898c9.302.614 18.005-6.952 18.629-16.293l28.393-424.515c.639-9.528-6.766-17.993-16.293-18.63zm-122.006 465.902v-52.1c0-1.378 1.122-2.5 2.5-2.5h51.9zm94.939-23.757c-.244 1.51-1.131 2.286-2.66 2.327l-46.28-3.096 31.752-31.611c1.414-1.407 2.209-3.32 2.209-5.315v-355.86c0-9.649-7.851-17.5-17.5-17.5h-77.993c-9.697 0-9.697 15 0 15h77.993c1.379 0 2.5 1.122 2.5 2.5v347.712h-62.46c-9.649 0-17.5 7.851-17.5 17.5v62.753h-218.641c-1.378 0-2.5-1.122-2.5-2.5v-425.465c0-1.378 1.122-2.5 2.5-2.5h178.168c9.697 0 9.697-15 0-15h-123.868l2.244-33.556c.244-1.511 1.131-2.286 2.661-2.327l295.44 19.76c1.511.244 2.287 1.131 2.328 2.661z" />
-                              <path d="m267.827 237.047h-204.553c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z" />
-                              <path d="m267.827 289.332h-204.553c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z" />
-                              <path d="m55.774 192.262c0 4.142 3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-204.553c-4.142 0-7.5 3.358-7.5 7.5z" />
-                              <path d="m91.807 139.977c0 4.142 3.358 7.5 7.5 7.5h132.487c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-132.487c-4.142 0-7.5 3.358-7.5 7.5z" />
-                              <path d="m194.755 438.787c-13.489.036-26.978.065-40.467.086-4.534.007-9.067.013-13.6.016-8.215.006-13.75-1.643-15.59-10.679-1.556-7.64-12.364-6.613-14.464 0-5.19 16.337-13.774 9.936-18.582-1.053-4.797-10.963-6.027-23.233-8.122-34.9-1.54-8.573-14.506-6.17-14.732 1.994-.298 10.751-1.302 21.331-4.031 31.758-2.815 10.758-7.034 21.097-11.222 31.376-3.651 8.961 10.867 12.816 14.464 3.988 3.711-9.108 7.427-18.266 10.193-27.714 5.14 12.36 15.774 26.34 30.927 18.101 2.819-1.533 5.452-3.712 7.763-6.253 7.88 9.106 19.609 8.388 30.584 8.375 15.627-.02 31.254-.054 46.881-.095 9.649-.025 9.667-15.025-.002-15z" />
-                              <path d="m505.932 246.439c-3.897-3.878-9.255-5.867-14.695-6.014l-5.668.028v-10.719c0-6.529-3.878-13.427-9.433-16.862v-15.098c0-31.069-48.372-30.934-48.372.146v15.1c-5.659 3.498-9.455 9.741-9.455 16.852v10.982c-24.966 1.7-25.037 39.745.028 41.232.16 33.575.152 66.6-.028 100.737-.049 9.414 14.949 9.966 15 .079.18-34.166.188-67.22.029-100.823l37.211-.185s-.048 110.848-.048 160.784c0 24.338-37.219 24.5-37.219-.253l.013-13.677c.585-9.68-14.387-10.583-14.973-.904v12.834c0 11 3.402 20.316 9.988 26.869.586 15.693 7.198 30.878 18.369 41.956 3.205 3.18 7.642 2.208 10.744-.182 11.365-11.385 17.769-26.394 18.169-42.414 4.951-4.931 9.908-9.896 9.908-26.896l.006-68.351c12.97 3.689 26.494-6.348 26.494-19.946v-90.672c0-5.523-2.155-10.709-6.068-14.603zm-72.623-5.727v-10.841c0-2.219 1.523-4.08 3.573-4.633l30.025-.149c.84.208 1.615.605 2.243 1.231.915.911 1.419 2.123 1.419 3.414v10.794zm18.671-52c4.604 0 9.155 4.514 9.155 9.062v12.166l-18.372.091v-12.111c.001-5.053 4.133-9.183 9.217-9.208zm-.011 303.901c-3.487-4.942-6.009-10.531-7.417-16.406 2.322.503 4.674.765 7.027.765 2.627 0 5.253-.326 7.839-.957-1.374 5.964-3.892 11.587-7.449 16.598zm45.031-140.899c0 7.101-11.452 7.66-11.452.131 0 0 .013-70.974.021-77.48.005-4.196-3.483-7.509-7.558-7.509l-58.389.29c-7.242 0-7.073-11.331.074-11.366l71.615-.355c3.463.295 5.359 2.168 5.688 5.617v90.672z" />
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                      <div className="solu_title">
-                        <h3>Skill Development</h3>
-                      </div>
-                      <div className="solu_description">
-                        <p>
-                        Students enhance technical proficiency. Develop communication, teamwork, problem-solving, and time management skills.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        </section>
+        <div className="trending__discover" data-aos="zoom-in">
+          <p>Discover</p>
+        </div>
+        <section className="trending-drinks">
+          <div className="trending__image flex-center">
+            <img src="assets/sushi-4.png" alt="corporate" data-aos="fade-right" />
+            <div className="trending__arrow trending__arrow-top">
+              <img src={arrowhorizontal} style={{marginTop:'-10px'}} alt="arrow horizontal" />
             </div>
-          </div>  
-        </div >
-        {/*To add additional space to cover up the card*/}
-        {/*<div className="filler" style={{ marginBottom: '150px'}}>
-        </div>*/}
-        <footer className='mt-5'>
-          <div className="bg-img-4">
-            <div className="container-fluid bg-opacity-50" style={{ height: "60vh", backgroundColor: '#02084b', width: '100%' }}>
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-6 mt-5 text-white text-center">
-                    <span className="fs-1 text-white  fw-bold" style={{ fontFamily: "sans-serif" }}>OpenGalaxy</span>
-
-                    <p className="footer-text">Unlock the doors to knowledge, collaboration, and real-world impact</p>
-                    <i className="fa-brands fa-twitter fs-5 text-white"></i>
-                    <i className="fa-brands fa-facebook ms-2 fs-5 text-white"></i>
-                    <i className="fa-brands fa-instagram ms-2 fs-5 text-white"></i>
-                    <p className="mt-2 mb-1 footer-text">+91 7269095830</p>
-                    <p className="mb-1 footer-text">opengalaxy12@gmail.com</p>
-                    <p className="mb-4 footer-text">Hazratganj,Lucknow</p>
-                  </div>
-                  <div className="col-md-6 mt-5 text-white text-center">
-                    <h5 className="mb-4 mt-4 footer-head">Quick Links</h5>
-                    <Link to="/Home" className="nav-link"> <p className='footer-text'>Home</p></Link>
-                    {/*<Link to="/Shop" className="nav-link"><p className="footer-text">Signup</p></Link>*/}
-                    <Link to="/AboutUs" className="nav-link">  <p className="footer-text">Login</p></Link>
-                    <Link to="/Login" className="nav-link"><p className="footer-text">Project</p></Link>
-                  </div>
-                  <div className="container">
-                    <p className="text-center text-light p-4" style={{ fontFamily: "serif" }}>@2023 | All Right Reserved</p>
-                  </div>
-
-
-                </div>
-              </div>
+            <div className="trending__arrow trending__arrow-right">
+              <img src={arrowvertical}alt="arrow vertical" />
             </div>
           </div>
-
-        </footer>
-
-      </div>
-    </div>
+          <div className="trending__content" data-aos="fade-left" id='trending'>
+            <p className="sushi__subtitle">What’s Trending?</p>
+            <h3 className="sushi__title">Corporate Hub</h3>
+            <p className="sushi__description">
+              Corporate Hub Tagline
+            </p>
+            <ul className="trending__list flex-between">
+              <li>
+                <div className="trending__icon flex-center">
+                  <img src={check} alt="check" />
+                </div>
+                <p>Pt 1</p>
+              </li>
+              <li>
+                <div className="trending__icon flex-center">
+                  <img src={check} alt="check" />
+                </div>
+                <p>Pt 2</p>
+              </li>
+              <li>
+                <div className="trending__icon flex-center">
+                  <img src={check} alt="check" />
+                </div>
+                <p>Pt 3</p>
+              </li>
+              <li>
+                <div className="trending__icon flex-center">
+                  <img src={check} alt="check" />
+                </div>
+                <p>Pt 3</p>
+              </li>
+              <li>
+                <div className="trending__icon flex-center">
+                  <img src={check} alt="check" />
+                </div>
+                <p>Pt 4</p>
+              </li>
+              <li>
+                <div className="trending__icon flex-center">
+                  <img src={check} alt="check" />
+                </div>
+                <p>Pt 4</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <section className="subscription flex-center" id="services">
+        <h2 data-aos="flip-down">
+          Get updates straight <br />
+          to your inbox
+        </h2>
+        <p data-aos="fade-up">Sign up for the Source Hype newsletter</p>
+        <div className="subscription__form" data-aos="fade-up">
+          <input type="text" placeholder="Enter your email address"  />
+          <button>Get Started</button>
+        </div>
+      </section>
+      <footer className="footer flex-between">
+        <h3 className="footer__logo">
+          <span style={{color:'#4D869C'}}>Source</span>
+           <span></span>Hype
+        </h3>
+        <ul className="footer__nav">
+          <li>
+            <a href="#menu">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#food">Cookies</a>
+          </li>
+          <li>
+            <a href="#services">Terms of Use</a>
+          </li>
+          <li>
+            <a href="#about-us">About Us</a>
+          </li>
+        </ul>
+        <ul className="footer__social">
+          <li className="flex-center">
+            <img src={facebook} alt="facebook" />
+          </li>
+          <li className="flex-center">
+            <img src={instagram} alt="instagram" />
+          </li>
+          <li className="flex-center">
+            <img src={twitter} alt="twitter" />
+          </li>
+        </ul>
+      </footer>
+    </>
   )
 }
+
 
 export default Home

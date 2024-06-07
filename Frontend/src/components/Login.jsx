@@ -2,7 +2,7 @@ import React from 'react'
 import { enqueueSnackbar } from 'notistack';
 import useAppContext from '../AppContext';
 import gitLogo from "../assets/gitLogo.gif"
-import LoginBg from "../assets/LoginBg.svg"
+import LoginBg from "../assets/LoginBg.gif"
 
 const Login = () => {
   const { setLoggedIn } = useAppContext();
@@ -40,7 +40,7 @@ const Login = () => {
 }
 
 return (
-  <div style={{backgroundImage: `url(${LoginBg})`, backgroundSize:'cover'}}>
+  <div style={{backgroundImage: `url(${LoginBg})`, backgroundSize:'cover', width:'100%'}}>
   <div className='container d-flex '>
     <div className="card login-card">
       <img src={gitLogo} className='git-logo' />
