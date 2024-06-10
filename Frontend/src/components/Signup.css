@@ -147,8 +147,8 @@ button:focus {
 }
 .cardright{
     width: 50%;
-    border-radius: 30px;
+    border-radius: 20px;
     background-image: url(../assets/SignupImage.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 80%;
 }

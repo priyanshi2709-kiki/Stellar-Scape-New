@@ -93,10 +93,10 @@ app.get('/auth/github',
     passport.authenticate('github'));
 
 app.get('/auth/github/callback',
-    passport.authenticate('github', { failureRedirect: 'http://localhost:5173/failed' }),
+    passport.authenticate('github', { failureRedirect: 'http://localhost:5174/failed' }),
     (req, res) => {
         // res.redirect('http://localhost:5173');
-        res.redirect('http://localhost:5173/authenticated/' + req.user.username);
+        res.redirect('http://localhost:5174/authenticated/' + req.user.username);
     });
 
 app.get('/logout', (req, res) => {

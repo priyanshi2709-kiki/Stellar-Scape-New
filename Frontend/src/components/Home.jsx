@@ -6,7 +6,8 @@ import aboutus2 from '../assets/aboutus2.gif'
 import user from '../assets/user.png'
 import useAppContext from '../AppContext';
 import '../components/Home.css'
-import docTren from '../assets/docTren.svg'
+import docTren from '../assets/docTren.png'
+import corpTren from '../assets/corpTren.png'
 import signupbg from '../assets/signupbg.gif'
 import logo from '../assets/logo.svg'
 import hero from '../assets/hero.gif'
@@ -19,6 +20,7 @@ import cLogo from '../assets/cLogo.png'
 import allLogo from '../assets/allLogo.png'
 import corporateLogo from '../assets/corporateLogo.svg'
 import docLogo from '../assets/docLogo.svg'
+import exlogo from '../assets/exlogo.png'
 import arrowright from '../assets/arrowright.svg'
 import star from '../assets/star.svg'
 import arrowvertical from '../assets/arrowvertical.svg'
@@ -99,14 +101,14 @@ const Home = () => {
   return (
     <>
       <header>
-        <nav className="header__nav" style={{marginBottom:'-35px'}}>
+        <nav className="header__nav" style={{marginBottom:'-35px',fontSize:'10px'}}>
           <div className="header__logo">
             
             <div className="header__logo-overlay " />
             <img src={logo} alt="logo" style={{width:'20%', marginTop:'-35px', marginLeft:'-10px'}} />
             <h4 data-aos="fade-down" style={{marginLeft:'-30px', color:'white'}}>Source Hype</h4>
           </div>
-          <ul className="header__menu" data-aos="fade-down">
+          <ul className="header__menu" data-aos="fade-down" >
             <li>
               <Link className="signup" to="/Signup">Sign Up</Link>
             </li>
@@ -121,7 +123,7 @@ const Home = () => {
             </li>
 
             <li>
-              <img src="assets/search.svg" alt="search" />
+              <Link className="contact" to="/Contact">Contact</Link>
             </li>
           </ul>
           <ul className="header__menu-mobile" data-aos="fade-down">
@@ -168,16 +170,8 @@ const Home = () => {
       <section className="about-us" id="about-us">
         <div className="about-us__image">
           <div className="about-us__image-sushi3">
-            <img src={aboutus2} alt="collaboration" data-aos="fade-right" style={{marginLeft:'100px',width:'50%', height:'50%'}} />
-          </div>
-          <Link to="/aboutus">
-          <button className="about-us__button">
-            Learn More
-            <img src={arrowupright} alt="learn more" />
-          </button>
-          </Link>
-          <div className="about-us__image-sushi2">
-            <img src={aboutus3} alt="technology" data-aos="fade-right" />
+            <img src={aboutus2} alt="collaboration" data-aos="fade-right" style={{width:'100%', height:'80%'}} />
+            {/*<img src={aboutus3} alt="technology" data-aos="fade-right" />*/}
           </div>
         </div>
         <div className="about-us__content" data-aos="fade-left">
@@ -192,7 +186,7 @@ const Home = () => {
         </div>
       </section>
       <section className="popular-foods" id="projects">
-        <h2 className="popular-foods__title" data-aos="flip-up" style={{color:'#5271FF'}}>
+        <h2 className="popular-foods__title" data-aos="flip-up" style={{color:'#031879'}}>
           Popular Projects
         </h2>
         <div
@@ -261,10 +255,11 @@ const Home = () => {
           <article className="popular-foods__card">
             <img
               className="popular-foods__card-image"
-              src="assets/sushi-10.png"
+              src={exlogo}
               alt="exhibis"
             />
             <h4 className="popular-foods__card-title">Exhibis</h4>
+            <button className="popular-foods__filter-btn active">View Project</button>
             <div className="popular-foods__card-details flex-between">
               <div className="popular-foods__card-rating">
               <img src={star} alt="star" />
@@ -328,7 +323,7 @@ const Home = () => {
               </li>
             </ul>
           </div>
-          <div className="trending__image flex-center">
+          <div className="trending__image flex-center image-fluid">
             <img src={docTren} alt="doc" data-aos="fade-left" style={{backgroundSize:'cover', width:'100%'}}/>
             <div className="trending__arrow trending__arrow-left">
               <img src={arrowvertical} alt="arrow vertical" />
@@ -339,11 +334,11 @@ const Home = () => {
           </div>
         </section>
         <div className="trending__discover" data-aos="zoom-in">
-          <p>Discover</p>
+          <Link to={'/ProjectListing'}><p>Discover</p></Link>
         </div>
         <section className="trending-drinks">
           <div className="trending__image flex-center">
-            <img src="assets/sushi-4.png" alt="corporate" data-aos="fade-right" />
+            <img src={corpTren} alt="corporate" data-aos="fade-right" style={{backgroundSize:'cover'}} />
             <div className="trending__arrow trending__arrow-top">
               <img src={arrowhorizontal} style={{marginTop:'-10px'}} alt="arrow horizontal" />
             </div>
