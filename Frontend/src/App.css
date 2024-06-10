@@ -264,3 +264,65 @@
   height: 500%;
   background-size: cover;
 }
+
+.view-t {
+  /* position: absolute; */
+  margin-top: 100px;
+  margin-left: 200px;
+}
+.Video{
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  
+}
+.vid{
+  position: absolute;
+  width: 100%;
+  z-index: -10;
+}
+.task-head {
+  background-color: rgb(193, 191, 191);
+  width: 80%;
+  margin-top: 100px;
+  padding-left: 120px;
+  height: 100px;
+  color: darkblue;
+  font-size: 40px;
+  font-family: sans-serif;
+  font-weight: bold ;
+  border-radius: 40px;
+  box-shadow: 3px 3px 9px darkblue;
+}
+.task-head:hover{
+  font-size: 41px;
+}
+
+.enroll-btn {
+  /*  position: absolute; */
+  /* margin-top: -650px;  
+  margin-left: 800px; */
+  width: 300px;
+  height: 60px;
+  font-size: 20px;
+}
+
+.enroll-txt {
+  margin-top: -320px;
+  margin-left: 710px;
+  font-size: 25px;
+}
+
+.p-desc {
+  margin-top: 80px;
+}
+.p-name{
+  margin-top: 100px;
+  /* margin-left: 210px; */
+  font-size: 60px;
+  font-family: sans-serif;
+  font-weight: bolder
+}
+.p-desc{
+  margin-top:70px;
+}

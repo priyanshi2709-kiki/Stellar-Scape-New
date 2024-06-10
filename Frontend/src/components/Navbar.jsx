@@ -18,7 +18,7 @@ const Navbar = () => {
   console.log(githubusername);
 
   const getGithubData = async () => {
-    const res = await fetch(`http://localhost:3000/user/${githubusername}`);
+    const res = await fetch(`http://localhost:3000/githubuser/${githubusername}`);
 
     if (res.status === 200) {
       const data = await res.json();
@@ -51,7 +51,7 @@ const Navbar = () => {
     }
     else {
       return (
-        <Link type="submit" to="/Login" className="login-container btn" >Login
+        <Link type="submit" to="/Login" className=" btn" >Login
 
         </Link>
       )
@@ -59,7 +59,7 @@ const Navbar = () => {
   }
 
   return (
-    <div><nav className="navbar navbar-expand-lg navbar-dark bg-warning"id='navbar'>
+    <div><nav className="navbar navbar-expand-lg navbar-dark "id='navbar'>
       <div className="container-fluid">
         <Link className="navbar-brand" to="Home">
           <img src="" alt="" />
@@ -78,13 +78,13 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="Home">
+              <Link className="nav-link active" aria-current="page" to="Home" style={{color:'black'}}>
                 Home
               </Link>
             </li>
            
             <li className="nav-item">
-              <Link className="nav-link" to="/Contact">
+              <Link className="nav-link" to="/Contact" style={{color:'black'}}>
                 Contact Us
               </Link>
             </li>

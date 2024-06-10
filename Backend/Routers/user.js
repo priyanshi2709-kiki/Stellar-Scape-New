@@ -24,10 +24,10 @@ router.post('/authenticate',(req,res) => {
         res.status(500).json(err)
     });
 })
-router.post('/getall',(req,res) => {
+router.get('/getall',(req,res) => {
     Model.find({}) // display all the data in that particular DB
     .then((result) => {
-        res.join(result);
+        res.json(result);
     }).catch((err) => {
         console.log(err)
         res.status(500).json(err)
@@ -61,4 +61,15 @@ router.get("/getuser/:id",(req,res) =>{
         res.status(500).json(err)
     });
 })
+router.get("/getbygithubuser/:username", (req, res) => {
+    Model.findOne({username: req.params.username})
+      .then((result) => {
+        console.log("User Data Retrieved");
+        res.status(200).json(result);
+      })
+      .catch((err) => {
+        console.error("Error retrieving user data", err);
+        res.status(500).send("Error retrieving user data");
+      });
+  });
 module.exports = router;

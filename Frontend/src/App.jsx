@@ -19,6 +19,7 @@ import View from './components/View'
 import UpdateProject from './components/UpdateProject'
 import UpdateTask from './components/UpdateTask'
 import AddTask from './components/AddTask'
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
@@ -26,8 +27,8 @@ const App = () => {
       <SnackbarProvider>
         <BrowserRouter>
           <AppProvider>
-            <Home_sidebar />
-            {/*<Navbar />*/}
+            {/* <Home_sidebar /> */}
+            {/* <Navbar /> */}
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/Home' element={<Home />} />

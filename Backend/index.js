@@ -25,10 +25,12 @@ const contactRouter = require('./Routers/contact')
 const addProjectRouter = require('./Routers/addProject')
 const addTaskRouter = require('./Routers/Task')
 const utilRouter = require('./Routers/util')
+const EnrollRouter = require('./Routers/Enroll');
+
 
 
 app.use(cors({
-    origin: ['http://localhost:5174']
+    origin: ['http://localhost:5173']
 }))
 app.use(express.json());
 app.use('/userData', UserDataRouter)
@@ -37,7 +39,7 @@ app.use('/contact', contactRouter)
 app.use('/project', addProjectRouter)
 app.use('/task', addTaskRouter)
 app.use('/util', utilRouter)
-
+app.use('/enroll', EnrollRouter);
 
 // Configure GitHub strategy for Passport
 passport.use(new GitHubStrategy({
@@ -103,7 +105,7 @@ app.get('/logout', (req, res) => {
     res.redirect('/');
 });
 
-app.get('/user/:username', (req, res) => {
+app.get('/githubuser/:username', (req, res) => {
     console.log('user : ' + githubUsers[req.params.username]);
     if (githubUsers[req.params.username]) {
         res.json(githubUsers[req.params.username]);
