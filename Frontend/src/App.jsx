@@ -19,6 +19,9 @@ import View from './components/View'
 import UpdateProject from './components/UpdateProject'
 import UpdateTask from './components/UpdateTask'
 import AddTask from './components/AddTask'
+import AdminDasboard from './components/AdminDasboard'
+import AdminAuth from './AdminAuth'
+import UserAuth from './UserAuth'
 
 const App = () => {
   return (
@@ -46,7 +49,10 @@ const App = () => {
               <Route path='/AdminLogin' element={<AdminLogin />} />
               <Route path='/UpdateProject/:id' element={<UpdateProject />} />
               <Route path='/UpdateTask/:id' element={<UpdateTask />} />
-              <Route path='/View/:id' element={<View />} />
+              <Route path='/View/:id' element={<UserAuth><View /></UserAuth>} />
+              <Route path='/AdminDasboard' element={<AdminDasboard />} />
+              <Route path='/AdminAuth' element={<AdminAuth />} />
+              <Route path='/UserAuth' element={<UserAuth />} />
 
             </Routes>
           </AppProvider>

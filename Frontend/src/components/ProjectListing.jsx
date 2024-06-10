@@ -29,12 +29,8 @@ const ProjectListing = () => {
                             <div class="ag-courses-item_title">
                                 {pro.pname}
                             </div>
-
                             <div class="ag-courses-item_date-box">
-                                Start:
-                                <span class="ag-courses-item_date">
-                                    04.11.2022
-                                </span>
+                            {pro.pinfo}
                             </div>
                         </Link>
                     </div>
