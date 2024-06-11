@@ -11,10 +11,13 @@
   },
   "dependencies": {
     "@uiw/react-md-editor": "^4.0.4",
+    "axios": "^1.7.2",
     "formik": "^2.4.6",
     "notistack": "^3.0.1",
     "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1",
     "react-router-dom": "^6.23.0",
     "swiper": "^11.1.1",
     "yup": "^1.4.0"

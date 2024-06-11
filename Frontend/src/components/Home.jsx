@@ -46,8 +46,9 @@ const Home = () => {
 
   const isHomePage = location.pathname === '/';
 
-  const isLoggedIn = sessionStorage.getItem('user');
+  const isLoggedIn = sessionStorage.getItem('admin');
   const [currentUser, setCurrentUser] = useState(null);
+  const LoggedIn = sessionStorage.getItem('isloggedin');
 
   const { logout, loggedIn, setLoggedIn } = useAppContext();
 
@@ -58,7 +59,7 @@ const Home = () => {
   console.log(githubusername);
 
   const getGithubData = async () => {
-    const res = await fetch(`http://localhost:3000/githubuser/${githubusername}`);
+    const res = await fetch(`http://localhost:3000/user/${githubusername}`);
 
     if (res.status === 200) {
       const data = await res.json();
@@ -101,30 +102,42 @@ const Home = () => {
   return (
     <>
       <header>
-        <nav className="header__nav" style={{marginBottom:'-35px',fontSize:'10px'}}>
+        <nav className="header__nav" style={{ marginBottom: '-35px', fontSize: '10px' }}>
           <div className="header__logo">
-            
+
             <div className="header__logo-overlay " />
-            <img src={logo} alt="logo" style={{width:'20%', marginTop:'-35px', marginLeft:'-10px'}} />
-            <h4 data-aos="fade-down" style={{marginLeft:'-30px', color:'white'}}>Source Hype</h4>
+            <img src={logo} alt="logo" style={{ width: '20%', marginTop: '-35px', marginLeft: '-10px' }} />
+            <h4 data-aos="fade-down" style={{ marginLeft: '-30px', color: 'white' }}>Source Hype</h4>
           </div>
           <ul className="header__menu" data-aos="fade-down" >
-            <li>
-              <Link className="signup" to="/Signup">Sign Up</Link>
-            </li>
-            <li>
-              <a href="#about-us">About Us</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#trending">Trending</a>
-            </li>
+            {user ? (
+              <>
+                <Link to="/">Home </Link>
+                <Link to="Project">Project</Link>
+                <Link to="ContactUs">Contact</Link>
+                <Link to="User/UserDashboard">Dashboard</Link>
+                {/* <Link to="">User Profile</Link> */}
+              </>
+            ) : (
+              <>
+                <Link to="/">Home</Link>
+                <Link to="Project">Project</Link>
+                <Link to="ContactUs">Contact</Link>
+              </>
+            )}
 
-            <li>
-              <Link className="contact" to="/Contact">Contact</Link>
-            </li>
+            {isLoggedIn ? (
+              <>
+                <Link type='button' onClick={logout} className="">
+                  Admin Logout
+                </Link>
+                <Link to='/Admin/ManageProject'>Admin Dashboard</Link>
+              </>
+            ) : (
+              <Link to="/AdminLogin" className="">
+                Admin Login
+              </Link>
+            )}
           </ul>
           <ul className="header__menu-mobile" data-aos="fade-down">
             <li>
@@ -135,7 +148,7 @@ const Home = () => {
       </header>
       <section className="hero">
         <div className="hero-image">
-          <img src={hero} alt="hero" data-aos="fade-up" style={{width:'100%'}} />
+          <img src={hero} alt="hero" data-aos="fade-up" style={{ width: '100%' }} />
           <div className="hero-image__overlay" />
         </div>
         <div className="hero-content">
@@ -144,7 +157,7 @@ const Home = () => {
             <p style={{ fontSize: '25px' }}>
               Work on Actual Projects with Source Hype's open source projects.
             </p>
-            <div className="hero-content__buttons" style={{marginLeft:'30%'}}>
+            <div className="hero-content__buttons" style={{ marginLeft: '30%' }}>
               {/* <Link to="/login">
                 <button className="hero-content__order-button">Login</button>
               </Link> */}
@@ -170,23 +183,23 @@ const Home = () => {
       <section className="about-us" id="about-us">
         <div className="about-us__image">
           <div className="about-us__image-sushi3">
-            <img src={aboutus2} alt="collaboration" data-aos="fade-right" style={{width:'100%', height:'80%'}} />
+            <img src={aboutus2} alt="collaboration" data-aos="fade-right" style={{ width: '100%', height: '80%' }} />
             {/*<img src={aboutus3} alt="technology" data-aos="fade-right" />*/}
           </div>
         </div>
         <div className="about-us__content" data-aos="fade-left">
-          <p className="sushi__subtitle" style={{fontSize:'30px', fontWeight:'400', marginTop:'-30px'}}>About Us </p>
-          <h3 className="sushi__title" style={{fontSize:'55px'}}>
+          <p className="sushi__subtitle" style={{ fontSize: '30px', fontWeight: '400', marginTop: '-30px' }}>About Us </p>
+          <h3 className="sushi__title" style={{ fontSize: '55px' }}>
             Our mission is to empower developers & enthusiasts.
           </h3>
           <p className="sushi__description">
-          Source Hype is committed to the notion that open source not only provides great technology for developers, but also brings the best out in people. 
+            Source Hype is committed to the notion that open source not only provides great technology for developers, but also brings the best out in people.
           </p>
 
         </div>
       </section>
       <section className="popular-foods" id="projects">
-        <h2 className="popular-foods__title" data-aos="flip-up" style={{color:'#031879'}}>
+        <h2 className="popular-foods__title" data-aos="flip-up" style={{ color: '#031879' }}>
           Popular Projects
         </h2>
         <div
@@ -194,10 +207,10 @@ const Home = () => {
           data-aos="fade-up"
         >
           <Link to="/ProjectListing">
-          <button className="popular-foods__filter-btn">
-          <img src={allLogo} alt="all" />
-          All
-          </button>
+            <button className="popular-foods__filter-btn">
+              <img src={allLogo} alt="all" />
+              All
+            </button>
           </Link>
           <button className="popular-foods__filter-btn">
             <img src={reactLogo} alt="react" />
@@ -262,7 +275,7 @@ const Home = () => {
             <button className="popular-foods__filter-btn active">View Project</button>
             <div className="popular-foods__card-details flex-between">
               <div className="popular-foods__card-rating">
-              <img src={star} alt="star" />
+                <img src={star} alt="star" />
                 <p>4.7</p>
               </div>
               <p className="popular-foods__card-price">13k+</p>
@@ -270,10 +283,10 @@ const Home = () => {
           </article>
         </div>
         <Link to='/ProjectListing'>
-        <button className="popular-foods__button" style={{marginLeft:'40%'}}>
-          Explore Projects
-          <img src={arrowright}alt="arrow-right" />
-        </button>
+          <button className="popular-foods__button" style={{ marginLeft: '40%' }}>
+            Explore Projects
+            <img src={arrowright} alt="arrow-right" />
+          </button>
         </Link>
       </section>
       <section className="trending" id="trending">
@@ -282,7 +295,7 @@ const Home = () => {
             <p className="sushi__subtitle">What’s Trending?</p>
             <h3 className="sushi__title">Quick-Doc Finder</h3>
             <p className="sushi__description">
-            "Your Health, Simplified. Anytime, Anywhere."
+              "Your Health, Simplified. Anytime, Anywhere."
             </p>
             <ul className="trending__list flex-between">
               <li>
@@ -324,12 +337,12 @@ const Home = () => {
             </ul>
           </div>
           <div className="trending__image flex-center image-fluid">
-            <img src={docTren} alt="doc" data-aos="fade-left" style={{backgroundSize:'cover', width:'100%'}}/>
+            <img src={docTren} alt="doc" data-aos="fade-left" style={{ backgroundSize: 'cover', width: '100%' }} />
             <div className="trending__arrow trending__arrow-left">
               <img src={arrowvertical} alt="arrow vertical" />
             </div>
             <div className="trending__arrow trending__arrow-bottom">
-              <img src={arrowhorizontal}  style={{marginTop:'10px'}}  alt="arrow horizontal" />
+              <img src={arrowhorizontal} style={{ marginTop: '10px' }} alt="arrow horizontal" />
             </div>
           </div>
         </section>
@@ -338,12 +351,12 @@ const Home = () => {
         </div>
         <section className="trending-drinks">
           <div className="trending__image flex-center">
-            <img src={corpTren} alt="corporate" data-aos="fade-right" style={{backgroundSize:'cover'}} />
+            <img src={corpTren} alt="corporate" data-aos="fade-right" style={{ backgroundSize: 'cover' }} />
             <div className="trending__arrow trending__arrow-top">
-              <img src={arrowhorizontal} style={{marginTop:'-10px'}} alt="arrow horizontal" />
+              <img src={arrowhorizontal} style={{ marginTop: '-10px' }} alt="arrow horizontal" />
             </div>
             <div className="trending__arrow trending__arrow-right">
-              <img src={arrowvertical}alt="arrow vertical" />
+              <img src={arrowvertical} alt="arrow vertical" />
             </div>
           </div>
           <div className="trending__content" data-aos="fade-left" id='trending'>
@@ -400,14 +413,14 @@ const Home = () => {
         </h2>
         <p data-aos="fade-up">Sign up for the Source Hype newsletter</p>
         <div className="subscription__form" data-aos="fade-up">
-          <input type="text" placeholder="Enter your email address"  />
+          <input type="text" placeholder="Enter your email address" />
           <button>Get Started</button>
         </div>
       </section>
       <footer className="footer flex-between">
         <h3 className="footer__logo">
-          <span style={{color:'#4D869C'}}>Source</span>
-           <span></span>Hype
+          <span style={{ color: '#4D869C' }}>Source</span>
+          <span></span>Hype
         </h3>
         <ul className="footer__nav">
           <li>

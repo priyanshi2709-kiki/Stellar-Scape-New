@@ -6,7 +6,6 @@ import Signup from './components/Signup'
 import { SnackbarProvider } from 'notistack'
 import Contact from './components/Contact'
 import ManageUser from './components/ManageUser'
-import ManageProject from './components/ManageProject'
 import ProjectListing from './components/ProjectListing'
 import AddProject from './components/AddProject'
 import Login from './components/Login'
@@ -19,7 +18,17 @@ import View from './components/View'
 import UpdateProject from './components/UpdateProject'
 import UpdateTask from './components/UpdateTask'
 import AddTask from './components/AddTask'
-import Navbar from './components/Navbar'
+import Header from './components/Admin/Header'
+import Main from './components/Admin/Main'
+import Sidebar from './components/Admin/Sidebar'
+// import AdminDashboard from './components/Admin/AdminDashboard'
+import ManageProject from './components/ManageProject'
+import UMain from './components/User/UMain'
+import UHeader from './components/User/UHeader'
+import USidebar from './components/User/USidebar'
+import UserDashboard from './components/User/UserDashboard'
+
+
 
 const App = () => {
   return (
@@ -38,7 +47,6 @@ const App = () => {
              { /*<Route path='/Navbar' element={<Navbar/>} />*/}
               <Route path='/Contact' element={<Contact />} />
               <Route path='/ManageUser' element={<ManageUser />} />
-              <Route path='/ManageProject' element={<ManageProject />} />
               <Route path='/ProjectListing' element={<ProjectListing />} />
               <Route path='/UpdateProject' element={<UpdateProject />} />
               <Route path='/AddProject' element={<AddProject />} />
@@ -47,10 +55,21 @@ const App = () => {
               <Route path='/AdminLogin' element={<AdminLogin />} />
               <Route path='/UpdateProject/:id' element={<UpdateProject />} />
               <Route path='/UpdateTask/:id' element={<UpdateTask />} />
-              <Route path='/View/:id' element={<UserAuth><View /></UserAuth>} />
-              <Route path='/AdminDasboard' element={<AdminDasboard />} />
-              <Route path='/AdminAuth' element={<AdminAuth />} />
-              <Route path='/UserAuth' element={<UserAuth />} />
+              <Route path='/View/:id' element={<View />} />
+
+              <Route path='/Admin' element={<Main/>}>
+              <Route path='Header' element={<Header />} />
+              <Route path='Sidebar' element={<Sidebar />} />
+              <Route path='ManageProject' element={<ManageProject />} />
+              {/* <Route path='AdminDashboard' element={<AdminDashboard />} /> */}
+              </Route>
+              <Route path='/User' element={<UMain />} >
+                <Route path='UHeader' element={<UHeader />} />
+                <Route path='USidebar' element={<USidebar />} />
+                <Route path='UserDashboard' element={<UserDashboard />} />
+                {/* <Route path='UserProfile' element={<UserProfile />} /> */}
+              </Route>
+            
 
             </Routes>
           </AppProvider>
