@@ -43,6 +43,16 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
                         <BsFillGrid3X3GapFill className='icon' /> Admin Profile
                     </Link>
                 </li>
+                <li className='sidebar-list-item'>
+                    <Link to="/">
+                        <BsFillGrid3X3GapFill className='icon' /> Home
+                    </Link>
+                </li>
+                <li className='sidebar-list-item'>
+                    <Link to="">
+                        <BsFillGrid3X3GapFill className='icon' /> Logout
+                    </Link>
+                </li>
 
             </ul>
         </aside>
