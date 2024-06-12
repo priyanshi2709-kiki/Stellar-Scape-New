@@ -15,7 +15,7 @@ function Main() {
     <div className='grid-container'>
         <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} />
       <div className=''>
-        <Header OpenSidebar={OpenSidebar} > <Outlet /> </Header>
+         <Outlet /> 
         
       </div>
       

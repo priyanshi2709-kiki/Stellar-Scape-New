@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import {useNavigate } from "react-router-dom";
 
-const ManageUser = () => {
+const ManageUser= () => {
     const navigate = useNavigate(); 
     const [Data, setData] = useState([])
 

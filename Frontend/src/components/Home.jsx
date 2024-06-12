@@ -46,7 +46,7 @@ const Home = () => {
 
   const isHomePage = location.pathname === '/';
 
-  const isLoggedIn = sessionStorage.getItem('admin');
+  const isLoggedIn = sessionStorage.getItem('user');
   const [currentUser, setCurrentUser] = useState(null);
   const LoggedIn = sessionStorage.getItem('isloggedin');
 
@@ -112,29 +112,29 @@ const Home = () => {
           <ul className="header__menu" data-aos="fade-down" >
             {user ? (
               <>
-                <Link to="/">Home </Link>
-                <Link to="Project">Project</Link>
-                <Link to="ContactUs">Contact</Link>
-                <Link to="User/UserDashboard">Dashboard</Link>
+                <Link style={{fontSize:'20px'}} to="/Signup">Signup </Link>
+                <Link style={{fontSize:'20px'}} to="/ProjectListing">Project</Link>
+                <Link style={{fontSize:'20px'}} to="/Contact">Contact</Link>
+                <Link style={{fontSize:'20px'}} to="/User/UserDashboard">Dashboard</Link>
                 {/* <Link to="">User Profile</Link> */}
               </>
             ) : (
               <>
-                <Link to="/">Home</Link>
-                <Link to="Project">Project</Link>
-                <Link to="ContactUs">Contact</Link>
+                <Link style={{fontSize:'20px'}} to="/">Home</Link>
+                <Link style={{fontSize:'20px'}} to="Project">Project</Link>
+                <Link style={{fontSize:'20px'}} to="ContactUs">Contact</Link>
               </>
             )}
 
-            {isLoggedIn ? (
+            {LoggedIn ? (
               <>
-                <Link type='button' onClick={logout} className="">
+                <Link style={{fontSize:'20px'}} type='button' onClick={logout} className="">
                   Admin Logout
                 </Link>
-                <Link to='/Admin/ManageProject'>Admin Dashboard</Link>
+                <Link style={{fontSize:'20px'}} to='/Admin/ManageProject'>Admin Dashboard</Link>
               </>
             ) : (
-              <Link to="/AdminLogin" className="">
+              <Link style={{fontSize:'20px'}} to="/AdminLogin" className="">
                 Admin Login
               </Link>
             )}

@@ -28,12 +28,12 @@ function USidebar({openSidebarToggle, OpenSidebar}) {
                 </Link>
             </li>
             <li className='sidebar-list-item'>
-                <Link to="/Project">
+                <Link to="/ProjectListing">
                     <BsFillGrid3X3GapFill className='icon'/> Project
                 </Link>
             </li>
             <li className='sidebar-list-item'>
-                <Link to="/Contactus">
+                <Link to="/Contact">
                     <BsFillGrid3X3GapFill className='icon'/> Contact
                 </Link>
             </li>
