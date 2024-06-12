@@ -46,7 +46,7 @@ const AdminLogin = () => {
                 sessionStorage.setItem('isloggedin', true);
                 if(data.role === 'admin'){
                     sessionStorage.setItem('admin', JSON.stringify(data));
-                    navigate('/Admin/ManageProject');
+                    navigate('/Admin/AdminDashboard');
                 }else{
                     sessionStorage.setItem('user', JSON.stringify(data));
                     navigate('/');

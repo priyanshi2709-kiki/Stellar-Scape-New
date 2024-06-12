@@ -1,10 +1,11 @@
 import React from 'react'
 // import '../../Styles/ViewProject.css;
 import MDEditor from "@uiw/react-md-editor";
-import sea from '../assets/video.mp4'
+// import sea from '../assets/video.mp4'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
+// import {image} from '../assets/image'
 
 const View= () => {
     const navigate = useNavigate();
@@ -102,7 +103,7 @@ const View= () => {
                     <div className="row ">
                         <div className="col-md-5 px-5">
                             <img
-                                className="img-fluid p-card-img2 shadow"
+                                className="img-fluid shadow" 
                                 src={"http://localhost:3000/" + projects.image}
                                 alt=""
                             />
@@ -161,11 +162,11 @@ const View= () => {
 
     return (
         <div>
-            <section>
+            {/* <section>
                 <div className='vid' >
                     <video className='Video' src={sea} alt="" autoPlay loop muted />
                 </div>
-            </section>
+            </section> */}
 
             <section className=''>
                 {displayData()}
