@@ -37,23 +37,23 @@ const Login = () => {
     }
 
 
-}
+  }
 
-return (
-  <div style={{backgroundImage: `url(${LoginBg})`, backgroundSize:'cover', width:'100%'}}>
-  <div className='container d-flex '>
-    <div className="card login-card">
-      <img src={gitLogo} className='git-logo' />
-      <div style={{fontSize: '25px', marginTop: '10px'}}>
-      <p> Login wih Github and you're all set!  </p></div>
-      <button type="submit" className='login-btn' onClick={handleLogin}>
-        Login with GitHub
-      </button>
-      {/* <button onClick={getData}>Get User Data</button> */}
+  return (
+    <div style={{ backgroundImage: `url(${LoginBg})`, backgroundSize: 'cover', width: '100%' }}>
+      <div className='container d-flex '>
+        <div className="card login-card">
+          <img src={gitLogo} className='git-logo' />
+          <div style={{ fontSize: '25px', marginTop: '10px' }}>
+            <p style={{marginLeft:'55px'}}> Login wih Github and you're all set!  </p></div>
+          <button type="submit" className='login-btn' onClick={handleLogin}>
+            Login with GitHub
+          </button>
+          {/* <button onClick={getData}>Get User Data</button> */}
+        </div>
+      </div>
     </div>
-  </div>
-  </div>
-)
+  )
 }
 
 export default Login

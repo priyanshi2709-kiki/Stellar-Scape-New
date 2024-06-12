@@ -30,8 +30,6 @@ import AdminProfile from './components/AdminProfile'
 import ManageUser from './components/ManageUser'
 import AddProjects from './components/AddProjects'
 
-
-
 const App = () => {
   return (
     <div>
