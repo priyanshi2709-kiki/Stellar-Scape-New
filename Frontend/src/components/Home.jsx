@@ -120,9 +120,9 @@ const Home = () => {
               </>
             ) : (
               <>
-                <Link style={{fontSize:'20px'}} to="/">Home</Link>
-                <Link style={{fontSize:'20px'}} to="Project">Project</Link>
-                <Link style={{fontSize:'20px'}} to="ContactUs">Contact</Link>
+                <Link to="/">Home</Link>
+                <Link to="Project">Project</Link>
+                <Link to="ContactUs">Contact</Link>
               </>
             )}
 
