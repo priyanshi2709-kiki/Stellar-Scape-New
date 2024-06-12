@@ -34,10 +34,10 @@ const ManageUser= () => {
                 <td>{obj.username}</td>
                 <td>{obj.displayName}</td>
                
-                {/* <td>
+                <td>
                     <button className="btn btn-danger" onClick={() => { deleteProject(obj._id) }}>Delete</button>
                 </td>
-                <td>
+                {/* <td>
                     <button className="btn btn-danger" onClick={ () => { navigate('/UpdateProject/'+obj._id) }}>Update</button>
                 </td> */}
             </tr>
@@ -55,11 +55,9 @@ const ManageUser= () => {
             <table className="table table-dark">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Category</th>
-                        <th>Description</th>
-                        <th></th>
+                        <th>User Name</th>
+                        <th>Display Name</th>
+                       
                         <th></th>
                     </tr>
                 </thead>

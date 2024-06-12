@@ -33,8 +33,13 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
                 </Link>
             </li>
             <li className='sidebar-list-item'>
-                <Link to="ManageGithubUser">
+                <Link to="ManageUser">
                 <BsFillGrid3X3GapFill className='icon'/> Manage Github User Data
+                </Link>
+            </li>
+            <li className='sidebar-list-item'>
+                <Link to="AddProjects">
+                <BsFillGrid3X3GapFill className='icon'/> AddProjects
                 </Link>
             </li>
             <li className='sidebar-list-item'>

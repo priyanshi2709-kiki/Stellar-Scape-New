@@ -24,6 +24,17 @@ router.post('/authenticate',(req,res) => {
         res.status(500).json(err)
     });
 })
+router.delete("/delete/:id", (req, res) => {
+    Model.findByIdAndDelete(req.params.id)
+      .then((result) => {
+        console.log("User Data Deleted");
+        res.status(200).json({ status: "success", result });
+      })
+      .catch((err) => {
+        console.error("Error deleting user data", err);
+        res.status(500).send("Error deleting user data");
+      });
+  });
 router.get('/getall',(req,res) => {
     Model.find({}) // display all the data in that particular DB
     .then((result) => {

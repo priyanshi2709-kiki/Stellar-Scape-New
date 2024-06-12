@@ -27,10 +27,10 @@ const ProjectListing = () => {
                             <div class="ag-courses-item_bg"></div>
 
                             <div class="ag-courses-item_title">
-                                {pro.pname}
+                                {pro.name}
                             </div>
                             <div class="ag-courses-item_date-box">
-                            {pro.pinfo}
+                            {pro.description}
                             </div>
                         </Link>
                     </div>
