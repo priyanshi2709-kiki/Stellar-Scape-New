@@ -6,7 +6,6 @@ import Signup from './components/Signup'
 import { SnackbarProvider } from 'notistack'
 import Contact from './components/Contact'
 import ProjectListing from './components/ProjectListing'
-import AddProject from './components/AddProject'
 import Login from './components/Login'
 import { AppProvider } from './AppContext'
 import Home_sidebar from './components/Home_sidebar'
@@ -28,8 +27,8 @@ import USidebar from './components/User/USidebar'
 import UserDashboard from './components/User/UserDashboard'
 import AdminDashboard from './components/Admin/AdminDashboard'
 import AdminProfile from './components/AdminProfile'
-
-
+import ManageUser from './components/ManageUser'
+import AddProjects from './components/AddProjects'
 
 const App = () => {
   return (
@@ -50,7 +49,7 @@ const App = () => {
              
               <Route path='/ProjectListing' element={<ProjectListing />} />
               <Route path='/UpdateProject' element={<UpdateProject />} />
-              <Route path='/AddProject' element={<AddProject />} />
+              
               <Route path='/AddTask' element={<AddTask />} />
               <Route path='/ForgetPassword' element={<ForgetPassword />} />
               <Route path='/AdminLogin' element={<AdminLogin />} />
@@ -62,9 +61,11 @@ const App = () => {
               <Route path='Header' element={<Header />} />
               <Route path='Sidebar' element={<Sidebar />} />
               <Route path='ManageProject' element={<ManageProject />} />
-              {/* <Route path='ManageUser' element={<ManageUser />} /> */}
+              <Route path='ManageUser' element={<ManageUser />} />
               <Route path='AdminDashboard' element={<AdminDashboard />} />
-              <Route path='AdminProfile' element={<AdminProfile />} /></Route>
+              <Route path='AdminProfile' element={<AdminProfile />} />
+              <Route path='AddProjects' element={<AddProjects />} />
+              </Route>
               <Route path='/User' element={<UMain />} >
                 <Route path='UHeader' element={<UHeader />} />
                 <Route path='USidebar' element={<USidebar />} />

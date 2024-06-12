@@ -6,7 +6,7 @@ import logo from '../assets/logo.svg'
 import { enqueueSnackbar } from 'notistack';
 
 const addProjectSchema = Yup.object().shape({});
-const AddProject = () => {
+const AddProjects = () => {
 
     const Navigate = useNavigate();
     const [selFile, setSelFile] = useState("");
@@ -138,4 +138,4 @@ const AddProject = () => {
     </div>
   );
 };
-export default AddProject
+export default AddProjects

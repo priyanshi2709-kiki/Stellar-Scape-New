@@ -1,9 +1,13 @@
-const {Schema, model} = require('../connection')
-const projectSchema =  new Schema ({
-    pname:  String,
-    pinfo: String,
-    pdescription: String,
-    pcategory: String,
-    image: String
+const {Schema, model} = require('../connection');
+
+const myschema = new Schema({
+    name: {type:String, required: true},
+    description: {type:String, required: true},
+    longDesc: {type:String, required: true},
+    image: {type:String, required: true},
+    status: {type:String, default:'pending'},
+    internCount: {type:Number},
+    createdAt: Date,
 });
-module.exports =  model('project', projectSchema)
+
+module.exports = model('project',myschema);

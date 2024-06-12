@@ -31,9 +31,8 @@ const ManageProject = () => {
     const displayProject = () =>{
         return Data.map((obj) => (
             <tr>
-                <td>{obj.pname}</td>
-                <td>{obj.pcategory}</td>
-                <td>{obj.pdescription}</td>
+                <td>{obj.name}</td>
+                <td>{obj.description}</td>
                 <td>
                     <button className="btn btn-primary" onClick={() => { deleteProject(obj._id) }}>Delete</button>
                 </td>
@@ -56,7 +55,7 @@ const ManageProject = () => {
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Category</th>
+                     
                         <th>Description</th>
                         <th></th>
                         <th></th>

@@ -107,7 +107,7 @@ const Home = () => {
 
             <div className="header__logo-overlay " />
             <img src={logo} alt="logo" style={{ width: '20%', marginTop: '-35px', marginLeft: '-10px' }} />
-            <h4 data-aos="fade-down" style={{ marginLeft: '-30px', color: 'white' }}>Source Hype</h4>
+            <Link to='/Admin/AdminDashboard'><h4 data-aos="fade-down" style={{ marginLeft: '-30px', color: 'white' }}>Source Hype</h4></Link>
           </div>
           <ul className="header__menu" data-aos="fade-down" >
             {user ? (

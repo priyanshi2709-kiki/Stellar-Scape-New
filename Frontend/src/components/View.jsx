@@ -106,6 +106,7 @@ const View= () => {
                                 src={"http://localhost:3000/" + projects.image}
                                 alt=""
                             />
+                        
                         </div>
 
                         <div className='col-md-7 px-5' >
