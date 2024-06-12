@@ -114,7 +114,7 @@ const Home = () => {
               <>
                 <Link to="/">Home </Link>
                 <Link to="Project">Project</Link>
-                <Link to="ContactUs">Contact</Link>
+                <Link to="Contact">Contact</Link>
                 <Link to="User/UserDashboard">Dashboard</Link>
                 {/* <Link to="">User Profile</Link> */}
               </>
@@ -122,7 +122,7 @@ const Home = () => {
               <>
                 <Link to="/">Home</Link>
                 <Link to="Project">Project</Link>
-                <Link to="ContactUs">Contact</Link>
+                <Link to="Contact">Contact</Link>
               </>
             )}
 
