@@ -113,7 +113,7 @@ const View= () => {
                             <div className=' p-desc d-flex justify-content-center'>
                                 {isEnrolled ? ( 
                                     // <button className='enroll-btn btn btn-success-disabled'>You are already enrolled in this project</button>
-                                    <h3 className=''>You are already enrolled in this project</h3>
+                                    <h3 className=''>You have enrolled in this project</h3>
                                 ) : (
                                     <button type='submit' className='btn btn-dark enroll-btn' onClick={enrollFunc}>Click to Enroll</button>
                                 )}

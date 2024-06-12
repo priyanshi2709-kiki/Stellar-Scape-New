@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useState } from 'react';
 import logo from '../assets/logo.svg'
+import { enqueueSnackbar } from 'notistack';
 
 const addProjectSchema = Yup.object().shape({});
 const AddProject = () => {
@@ -30,11 +31,13 @@ const AddProject = () => {
             console.log(res.status);
             action.resetForm();
             if (res.status === 200) {
-                // toast("Item uploaded successfully")
                 Navigate("/AddProject")
+                enqueueSnackbar('Project added successfully', { variant: 'success' });
+
             }
             else {
-                //    toast("Something went wrong")
+              enqueueSnackbar('Project addition failed', { variant: 'error' });
+
             }
         },
         validationSchema: addProjectSchema,

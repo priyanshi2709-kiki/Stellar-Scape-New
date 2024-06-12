@@ -64,8 +64,7 @@ const App = () => {
               <Route path='ManageProject' element={<ManageProject />} />
               {/* <Route path='ManageUser' element={<ManageUser />} /> */}
               <Route path='AdminDashboard' element={<AdminDashboard />} />
-              <Route path='AdminProfile' element={<AdminProfile />} />
-              </Route>
+              <Route path='AdminProfile' element={<AdminProfile />} /></Route>
               <Route path='/User' element={<UMain />} >
                 <Route path='UHeader' element={<UHeader />} />
                 <Route path='USidebar' element={<USidebar />} />
