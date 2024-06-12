@@ -5,7 +5,6 @@ import './App.css'
 import Signup from './components/Signup'
 import { SnackbarProvider } from 'notistack'
 import Contact from './components/Contact'
-import ManageUser from './components/ManageUser'
 import ProjectListing from './components/ProjectListing'
 import AddProject from './components/AddProject'
 import Login from './components/Login'
@@ -27,6 +26,8 @@ import UMain from './components/User/UMain'
 import UHeader from './components/User/UHeader'
 import USidebar from './components/User/USidebar'
 import UserDashboard from './components/User/UserDashboard'
+import AdminDashboard from './components/Admin/AdminDashboard'
+import AdminProfile from './components/AdminProfile'
 
 
 
@@ -46,7 +47,7 @@ const App = () => {
               <Route path='/Signup' element={<Signup />} />
              { /*<Route path='/Navbar' element={<Navbar/>} />*/}
               <Route path='/Contact' element={<Contact />} />
-              <Route path='/ManageUser' element={<ManageUser />} />
+             
               <Route path='/ProjectListing' element={<ProjectListing />} />
               <Route path='/UpdateProject' element={<UpdateProject />} />
               <Route path='/AddProject' element={<AddProject />} />
@@ -61,7 +62,9 @@ const App = () => {
               <Route path='Header' element={<Header />} />
               <Route path='Sidebar' element={<Sidebar />} />
               <Route path='ManageProject' element={<ManageProject />} />
-              {/* <Route path='AdminDashboard' element={<AdminDashboard />} /> */}
+              {/* <Route path='ManageUser' element={<ManageUser />} /> */}
+              <Route path='AdminDashboard' element={<AdminDashboard />} />
+              <Route path='AdminProfile' element={<AdminProfile />} />
               </Route>
               <Route path='/User' element={<UMain />} >
                 <Route path='UHeader' element={<UHeader />} />
