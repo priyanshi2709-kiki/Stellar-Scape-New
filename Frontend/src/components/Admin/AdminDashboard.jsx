@@ -9,7 +9,7 @@ const AdminDashboard = () => {
       <p className=''>
         <ReactTyped
           style={{fontSize: '80px', color: '#ff6219', fontWeight: 'bold'}}
-          strings={["DIY INNOVATES"]}
+          strings={["SOURCE HYPE"]}
           typeSpeed={120}
           backSpeed={50}
           loop={true}
