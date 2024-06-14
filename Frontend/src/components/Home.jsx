@@ -93,8 +93,8 @@ const Home = () => {
     }
     else {
       return (
-        <Link type="submit" to="/Login" className="btn btn-outline-dark" >Login
-
+        <Link type="submit" to="/Login" className="popular-foods__button" style={{marginLeft:'60px'}}>Login
+        <img src={arrowright} alt="arrow-right" />
         </Link>
       )
     }
@@ -363,44 +363,44 @@ const Home = () => {
             <p className="sushi__subtitle">What’s Trending?</p>
             <h3 className="sushi__title">Corporate Hub</h3>
             <p className="sushi__description">
-              Corporate Hub Tagline
+              "Your gateway to comprehensive corporate insights!"
             </p>
             <ul className="trending__list flex-between">
               <li>
                 <div className="trending__icon flex-center">
                   <img src={check} alt="check" />
                 </div>
-                <p>Pt 1</p>
+                <p>Corporate Information</p>
               </li>
               <li>
                 <div className="trending__icon flex-center">
                   <img src={check} alt="check" />
                 </div>
-                <p>Pt 2</p>
+                <p>Investor relation</p>
               </li>
               <li>
                 <div className="trending__icon flex-center">
                   <img src={check} alt="check" />
                 </div>
-                <p>Pt 3</p>
+                <p>News & Media</p>
               </li>
               <li>
                 <div className="trending__icon flex-center">
                   <img src={check} alt="check" />
                 </div>
-                <p>Pt 3</p>
+                <p>Compliance</p>
               </li>
               <li>
                 <div className="trending__icon flex-center">
                   <img src={check} alt="check" />
                 </div>
-                <p>Pt 4</p>
+                <p>Careers</p>
               </li>
               <li>
                 <div className="trending__icon flex-center">
                   <img src={check} alt="check" />
                 </div>
-                <p>Pt 4</p>
+                <p>Products & Services</p>
               </li>
             </ul>
           </div>

@@ -29,6 +29,7 @@ import AdminDashboard from './components/Admin/AdminDashboard'
 import AdminProfile from './components/AdminProfile'
 import ManageUser from './components/ManageUser'
 import AddProjects from './components/AddProjects'
+import Certificate from './components/Certificate'
 
 const App = () => {
   return (
@@ -56,7 +57,7 @@ const App = () => {
               <Route path='/UpdateProject/:id' element={<UpdateProject />} />
               <Route path='/UpdateTask/:id' element={<UpdateTask />} />
               <Route path='/View/:id' element={<View />} />
-
+              <Route path='/Certificate' element={<Certificate />} />
               <Route path='/Admin' element={<Main/>}>
               <Route path='Header' element={<Header />} />
               <Route path='Sidebar' element={<Sidebar />} />

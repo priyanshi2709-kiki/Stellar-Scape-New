@@ -240,16 +240,10 @@
   height: 50px;
   border-radius: 100px;
   box-shadow: 3px 3px 9px rgb(10, 10, 43);
-  background-color: #5271FF;
+  background-color: #1f1e31;
   color: white;
   font-size: 20px;
   font-weight: bolder;
-
-}
-
-.login-btn:hover {
-  width: 52%;
-  height: 55px;
 
 }
 
