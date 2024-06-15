@@ -3,7 +3,7 @@ import { useFormik } from 'formik'
 import { Link, useNavigate } from 'react-router-dom'
 import { enqueueSnackbar } from 'notistack';
 import * as Yup from 'yup'
-import useAppContext from '../AppContext'
+import useAdminContext from '../AdminContext'
 
 const LoginSchema = Yup.object().shape({
     password: Yup.string().min(4, 'Too short!').max(20, 'Too Long!'),
@@ -11,7 +11,7 @@ const LoginSchema = Yup.object().shape({
 });
 
 const AdminLogin = () => {
-    const { setLoggedIn } = useAppContext();
+    const { setLoggedIn } = useAdminContext();
 
     const navigate = useNavigate();
     const loginForm = useFormik({
