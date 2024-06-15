@@ -49,6 +49,7 @@ const Home = () => {
   const isLoggedIn = sessionStorage.getItem('user');
   const [currentUser, setCurrentUser] = useState(null);
   const LoggedIn = sessionStorage.getItem('isloggedin');
+  const [currentAdmin, setCurrentAdmin] = useState(JSON.parse(sessionStorage.getItem('admin')));
 
   const { logout, loggedIn, setLoggedIn } = useAppContext();
 
@@ -126,7 +127,7 @@ const Home = () => {
               </>
             )}
 
-            {LoggedIn ? (
+            {/* {LoggedIn ? (
               <>
                 <Link style={{fontSize:'20px'}} type='button' onClick={logout} className="">
                   Admin Logout
@@ -137,7 +138,7 @@ const Home = () => {
               <Link style={{fontSize:'20px'}} to="/AdminLogin" className="">
                 Admin Login
               </Link>
-            )}
+            )} */}
           </ul>
           <ul className="header__menu-mobile" data-aos="fade-down">
             <li>
