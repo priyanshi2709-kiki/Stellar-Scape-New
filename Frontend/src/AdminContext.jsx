@@ -25,5 +25,5 @@ export const AppProvider = ({children}) => {
     )
 }
 
-const useAdminContext = () => useContext(AppContext);
+const useAdminContext = () => useContext(AdminContext);
 export default useAdminContext;
