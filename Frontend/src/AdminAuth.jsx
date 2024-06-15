@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {Navigate, useNavigate} from 'react-router-dom';
+import { enqueueSnackbar } from 'notistack';
 
 const AdminAuth = ({children}) => {
 
@@ -11,12 +12,8 @@ const AdminAuth = ({children}) => {
   if(currentUser!==null){
     return children;
   }else{
-    Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text : 'You are not logged in!'
-    })
-    return <Navigate to="/Login" />
+    enqueueSnackbar('You are not authorized to view this page', { variant: 'error' });
+    return <Navigate to="/AdminLogin" />
   }
 }
 

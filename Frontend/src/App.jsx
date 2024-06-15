@@ -29,6 +29,7 @@ import AdminDashboard from './components/Admin/AdminDashboard'
 import AdminProfile from './components/AdminProfile'
 import ManageUser from './components/ManageUser'
 import AddProjects from './components/AddProjects'
+import AdminAuth from './AdminAuth'
 
 const App = () => {
   return (
@@ -57,7 +58,7 @@ const App = () => {
               <Route path='/UpdateTask/:id' element={<UpdateTask />} />
               <Route path='/View/:id' element={<View />} />
 
-              <Route path='/Admin' element={<Main/>}>
+              <Route path='/Admin' element={<AdminAuth><Main/></AdminAuth>}>
               <Route path='Header' element={<Header />} />
               <Route path='Sidebar' element={<Sidebar />} />
               <Route path='ManageProject' element={<ManageProject />} />
