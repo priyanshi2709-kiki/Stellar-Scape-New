@@ -29,6 +29,7 @@ import AdminDashboard from './components/Admin/AdminDashboard'
 import AdminProfile from './components/AdminProfile'
 import ManageUser from './components/ManageUser'
 import AddProjects from './components/AddProjects'
+import Certificate from './components/Certificate'
 import AdminAuth from './AdminAuth'
 
 const App = () => {
@@ -57,6 +58,8 @@ const App = () => {
               <Route path='/UpdateProject/:id' element={<UpdateProject />} />
               <Route path='/UpdateTask/:id' element={<UpdateTask />} />
               <Route path='/View/:id' element={<View />} />
+              <Route path='/Certificate' element={<Certificate />} />
+             
 
               <Route path='/Admin' element={<AdminAuth><Main/></AdminAuth>}>
               <Route path='Header' element={<Header />} />
