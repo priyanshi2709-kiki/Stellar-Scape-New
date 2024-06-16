@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {Navigate, useNavigate} from 'react-router-dom';
+import { enqueueSnackbar } from 'notistack';
 
 const UserAuth = ({children}) => {
 
@@ -11,11 +12,7 @@ const UserAuth = ({children}) => {
   if(currentUser!==null){
     return children;
   }else{
-    Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text : 'You are not logged in!'
-    })
+    enqueueSnackbar('You need to login first', {variant: 'error'});
     return <Navigate to="/Login" />
   }
 }

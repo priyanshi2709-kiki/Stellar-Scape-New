@@ -31,6 +31,7 @@ import ManageUser from './components/ManageUser'
 import AddProjects from './components/AddProjects'
 import Certificate from './components/Certificate'
 import AdminAuth from './AdminAuth'
+import UserAuth from './UserAuth'
 
 const App = () => {
   return (
@@ -70,7 +71,7 @@ const App = () => {
               <Route path='AdminProfile' element={<AdminProfile />} />
               <Route path='AddProjects' element={<AddProjects />} />
               </Route>
-              <Route path='/User' element={<UMain />} >
+              <Route path='/User' element={<UserAuth><UMain /></UserAuth>} >
                 <Route path='UHeader' element={<UHeader />} />
                 <Route path='USidebar' element={<USidebar />} />
                 <Route path='UserDashboard' element={<UserDashboard />} />
