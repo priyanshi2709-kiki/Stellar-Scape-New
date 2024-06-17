@@ -35,8 +35,7 @@
   width: 100%;
 }
 
-body {
-  padding: 20px 0;
+.bodyyyy {
   background-image: url(../assets/signupbg.gif);
 }
 
@@ -44,6 +43,7 @@ body {
   position: relative;
   width: 800px;
   height: 600px;
+  margin-top: 40px;
   background-color: #03354e;
   padding: 30px;
   color: #333;

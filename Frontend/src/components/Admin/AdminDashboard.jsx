@@ -1,6 +1,5 @@
 import React from 'react'
 import { ReactTyped } from "react-typed";
- 
 const AdminDashboard = () => {
   return (
     <div className='text-center' style={{marginTop:'100px'}}>
@@ -8,16 +7,12 @@ const AdminDashboard = () => {
       <h2 className='' style={{fontSize:'50px'}}>Admin Panel Of</h2>
       <p className=''>
         <ReactTyped
-          style={{fontSize: '80px', color: '#ff6219', fontWeight: 'bold'}}
+          style={{fontSize: '80px', color: '#064792', fontWeight: 'bold'}}
           strings={["SOURCE HYPE"]}
           typeSpeed={120}
           backSpeed={50}
           loop={true}
         /></p>
-
-
-    
-
     </div>
   )
 }

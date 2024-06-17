@@ -18,7 +18,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
         <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive" : ""} >
             <div className='sidebar-title'>
                 <div className='sidebar-brand'>
-                    <h6 className='icon_header' /> Source Hype
+                    <h6 className='icon_header'/> Source Hype
                 </div>
                 <span className='icon1 close_icon' onClick={OpenSidebar}>X</span>
             </div>
@@ -46,8 +46,8 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
                     </Link>
                 </li>
                 <li className='sidebar-list-item'>
-                    <Link to="AdminProfile">
-                        <BsFillGrid3X3GapFill className='icon' /> Admin Profile
+                    <Link to="/ProjectListing">
+                        <BsFillGrid3X3GapFill className='icon' /> Projects
                     </Link>
                 </li>
                 <li className='sidebar-list-item'>
@@ -71,7 +71,6 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
                         </Link>
                     )}
                 </li>
-
             </ul>
         </aside>
     )

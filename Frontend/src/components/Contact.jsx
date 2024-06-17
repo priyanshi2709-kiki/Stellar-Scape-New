@@ -49,62 +49,50 @@ const Contact = () => {
     }, []); // Empty dependency array ensures this effect runs only once after the initial render
 
     return (
-        <>
-            <div className="wrapper centered ">
-                <article className="letter">
-                    <div className="side">
-                        <form onSubmit={formContact.handleSubmit}>
-                            <div className="row">
-                                <div className="">
-                                    <div data-mdb-input-init="" className="form-outline">
-                                        <input
-                                            type="text"
-                                            id="name"
-                                            className="form-control"
-                                            onChange={formContact.handleChange}
-                                            value={formContact.values.name}
-                                        />
-                                        <label className="form-label" htmlFor="name">
-                                            Name
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div data-mdb-input-init="" className="form-outline">
-                                <input
-                                    type="email"
-                                    id="email"
-                                    className="form-control"
-                                    onChange={formContact.handleChange}
-                                    value={formContact.values.email}
-                                />
-                                <label className="form-label" htmlFor="email">
-                                    Email address
-                                </label>
-                            </div>
-                            <div data-mdb-input-init="" className="form-outline">
-                                <textarea
-                                    id="query"
-                                    className="form-control"
-                                    onChange={formContact.handleChange}
-                                    value={formContact.values.query}
-                                />
-                                <label className="form-label" htmlFor="query">
-                                    Your query
-                                </label>
-                            </div>
-                            <button type="submit" id="sendLetter">Send</button>
-                        </form>
-                    </div>
-                </article>
-                <div className="envelope front" />
-                <div className="envelope back" />
-            </div>
-            {formContact.submitCount > 0 && (
-                <p className="result-message centered">Thank you for your message</p>
-            )}
-        </>
-    );
-};
+        <div className="container">
+  <div className="content">
+    <div className="left-side">
+      <div className="address details">
+        <i className="fas fa-map-marker-alt" />
+        <div className="topic">Address</div>
+        <div className="text-one">Surkhet, NP12</div>
+        <div className="text-two">Birendranagar 06</div>
+      </div>
+      <div className="phone details">
+        <i className="fas fa-phone-alt" />
+        <div className="topic">Phone</div>
+        <div className="text-one">+0098 9893 5647</div>
+        <div className="text-two">+0096 3434 5678</div>
+      </div>
+      <div className="email details">
+        <i className="fas fa-envelope" />
+        <div className="topic">Email</div>
+        <div className="text-one">codinglab@gmail.com</div>
+        <div className="text-two">info.codinglab@gmail.com</div>
+      </div>
+    </div>
+    <div className="right-side">
+      <div className="topic-text">Send us a message</div>
+      <p>
+        If you have any work from me or any types of quries related to my
+        tutorial, you can send me message from here. It's my pleasure to help
+        you.
+      </p>
+      <form action="#">
+        <div className="input-box">
+          <input type="text" placeholder="Enter your name" />
+        </div>
+        <div className="input-box">
+          <input type="text" placeholder="Enter your email" />
+        </div>
+        <div className="input-box message-box"></div>
+        <div className="button">
+          <input type="button" defaultValue="Send Now" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+    )}
 
 export default Contact;
