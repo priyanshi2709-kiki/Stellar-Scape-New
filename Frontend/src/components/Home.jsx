@@ -85,7 +85,7 @@ const Home = () => {
         // <div className="dropdown">
         //   <button className="dropbtn login-container" >{currentUser.}</button>
         //   <div className="dropdown-content">
-        <button className="login-container btn" style={{ color: 'red' }} onClick={logout} >
+        <button className="login-container btn" style={{ color: 'blue' }} onClick={logout} >
           Logout
         </button>
         //   </div>
@@ -105,25 +105,24 @@ const Home = () => {
       <header>
         <nav className="header__nav" style={{ marginBottom: '-35px', fontSize: '10px' }}>
           <div className="header__logo">
-
-            <div className="header__logo-overlay " />
+             <div className="header__logo-overlay " />
             <img src={logo} alt="logo" style={{ width: '20%', marginTop: '-35px', marginLeft: '-10px' }} />
             <Link to='/Admin/AdminDashboard'><h4 data-aos="fade-down" style={{ marginLeft: '-30px', color: 'white' }}>Source Hype</h4></Link>
           </div>
           <ul className="header__menu" data-aos="fade-down" >
             {user ? (
               <>
-                <Link style={{fontSize:'20px'}} to="/Signup">Signup </Link>
-                <Link style={{fontSize:'20px'}} to="/ProjectListing">Project</Link>
-                <Link style={{fontSize:'20px'}} to="/Contact">Contact</Link>
-                <Link style={{fontSize:'20px'}} to="/User/UserDashboard">Dashboard</Link>
+                <Link style={{fontSize:'20px'}} to="/Signup">SIGNUP </Link>
+                <Link style={{fontSize:'20px'}} to="/ProjectListing">PROJECTS</Link>
+                <Link style={{fontSize:'20px'}} to="/Contact">CONTACT</Link>
+                <Link style={{fontSize:'20px'}} to="/User/UserDashboard">DASHBOARD</Link>
                 {/* <Link to="">User Profile</Link> */}
               </>
             ) : (
               <>
                 <Link to="/">Home</Link>
-                <Link to="Project">Project</Link>
-                <Link to="ContactUs">Contact</Link>
+                <Link to="/Project">Project</Link>
+                <Link to="/Contact">Contact</Link>
               </>
             )}
 
@@ -213,10 +212,12 @@ const Home = () => {
               All
             </button>
           </Link>
+          <Link to='/ProjectListing'>
           <button className="popular-foods__filter-btn">
             <img src={reactLogo} alt="react" />
             React
           </button>
+          </Link>
           <button className="popular-foods__filter-btn">
             <img src={androidLogo} alt="android" />
             Android
@@ -242,7 +243,8 @@ const Home = () => {
               alt="corporate"
             />
             <h4 className="popular-foods__card-title">Corporate Hub</h4>
-            <button className="popular-foods__filter-btn active">View Project</button>
+            <Link to='/ProjectListing'><button className="popular-foods__filter-btn active">View Project</button></Link>
+            
             <div className="popular-foods__card-details flex-between">
               <div className="popular-foods__card-rating">
                 <img src={star} alt="star" />
@@ -273,7 +275,7 @@ const Home = () => {
               alt="exhibis"
             />
             <h4 className="popular-foods__card-title">Exhibis</h4>
-            <button className="popular-foods__filter-btn active">View Project</button>
+            <Link to='/ProjectListing'><button className="popular-foods__filter-btn active">View Project</button></Link>
             <div className="popular-foods__card-details flex-between">
               <div className="popular-foods__card-rating">
                 <img src={star} alt="star" />

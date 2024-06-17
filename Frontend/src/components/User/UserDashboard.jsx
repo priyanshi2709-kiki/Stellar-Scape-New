@@ -1,4 +1,4 @@
-  import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
@@ -52,6 +52,7 @@ const UserDashboard = () => {
                   <h5 style={{marginTop:'10px'}}>Status : {project.status}</h5>
                   {project.status === 'pending' ? <Link to='/Certificate' className='btn btn-primary w-25 mt-3'>Get Certificate</Link> : null}
                 </div>
+
               </div>
             </div>
           </div>

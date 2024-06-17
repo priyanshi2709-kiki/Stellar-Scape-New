@@ -35,7 +35,7 @@ const ManageUser= () => {
                 <td>{obj.displayName}</td>
                
                 <td>
-                    <button className="btn btn-danger" onClick={() => { deleteProject(obj._id) }}>Delete</button>
+                    <button className="btn btn-primary" onClick={() => { deleteProject(obj._id) }}>Delete</button>
                 </td>
                 {/* <td>
                     <button className="btn btn-danger" onClick={ () => { navigate('/UpdateProject/'+obj._id) }}>Update</button>
@@ -45,14 +45,14 @@ const ManageUser= () => {
     }
   return (
     <div>
-        <header className='bg-danger text-white'>
+        <header className='bg-primary text-white'>
             <div className="container py-5">
                 <h1>Manage Project</h1>
             </div>
         </header>
 
         <div className="container mt-5">
-            <table className="table table-dark">
+            <table className="table table-info">
                 <thead>
                     <tr>
                         <th>User Name</th>
