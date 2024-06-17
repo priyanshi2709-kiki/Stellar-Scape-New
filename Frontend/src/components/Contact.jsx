@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useFormik } from 'formik';
 import { enqueueSnackbar } from 'notistack';
+import { Link } from 'react-router-dom';
 import '../components/Contact.css';
 
 const Contact = () => {
@@ -50,6 +51,22 @@ const Contact = () => {
 
     return (
         <>
+        <div>
+                <>
+                    <nav aria-label="breadcrumb">
+                        <ol className="breadcrumb">
+                            <li className="breadcrumb-item">
+                                <Link to="/">Home</Link>
+                            </li>
+                            <li className="breadcrumb-item active" aria-current="page">
+                                Contact
+                            </li>
+                        </ol>
+                    </nav>
+                    
+                </>
+
+            </div>
             <div className="wrapper centered ">
                 <article className="letter">
                     <div className="side">
