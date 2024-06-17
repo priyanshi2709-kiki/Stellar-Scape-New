@@ -1,5 +1,6 @@
   import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const UserDashboard = () => {
 
@@ -49,6 +50,7 @@ const UserDashboard = () => {
                 <div className="card" style={{marginTop:'20px',marginBottom:'15px', width:'700px', padding:'20px',backgroundColor: 'ButtonShadow',border:'3px solid #02084b'}}>
                   <h2 style={{fontFamily:'serif', fontWeight:'bold',color:'#02084b'}}>{project.name}</h2>
                   <h5 style={{marginTop:'10px'}}>Status : {project.status}</h5>
+                  {project.status === 'pending' ? <Link to='/Certificate' className='btn btn-primary w-25 mt-3'>Get Certificate</Link> : null}
                 </div>
               </div>
             </div>
