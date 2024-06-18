@@ -21,6 +21,7 @@ const UserDashboard = () => {
     await fetchProject(data._id)
     setDbUser(data);
   }
+  
 
   const fetchProject = async (userid) => {
     const res = await fetch("http://localhost:3000/enroll/getbyintern/" + userid);
