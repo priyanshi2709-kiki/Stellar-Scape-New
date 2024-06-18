@@ -79,42 +79,42 @@ const Certificate = () => {
                   </div>
                   <div className="col-xs-12">
                     <div className="row">
-                      <div className="col-xs-2">{/* LEAVE EMPTY */}</div>
+                      <div className="col-xs-2"></div>
                       <div className="pm-course-title underline col-xs-8 text-center">
                         <span className="pm-credits-text block bold sans">
                           React full stack development
                         </span>
                       </div>
-                      <div className="col-xs-2">{/* LEAVE EMPTY */}</div>
+                      <div className="col-xs-2"></div>
                     </div>
                   </div>
                 </div>
-                <div className="col-xs-2">{/* LEAVE EMPTY */}</div>
+                <div className="col-xs-2"></div>
                 <div className="col-xs-12" />
               </div>
             </div>
-            <div className="col-xs-12">
+            {/* <div className="col-xs-12">
               <div className="row">
-                <div className="col-xs-2">{/* LEAVE EMPTY */}</div>
+                <div className="col-xs-2"></div>
                 <div className="pm-course-title col-xs-8 text-center">
                   <span className="pm-earned-text block cursive">
                     while completing the training course entitled
                   </span>
                 </div>
-                <div className="col-xs-2">{/* LEAVE EMPTY */}</div>
+                <div className="col-xs-2"></div>
               </div>
-            </div>
-            <div className="col-xs-12">
+            </div> */}
+            {/* <div className="col-xs-12">
               <div className="row">
-                <div className="col-xs-2">{/* LEAVE EMPTY */}</div>
+                <div className="col-xs-2"></div>
                 <div className="pm-course-title underline col-xs-8 text-center">
                   <span className="pm-credits-text block bold sans">
                     React full stack development
                   </span>
                 </div>
-                <div className="col-xs-2">{/* LEAVE EMPTY */}</div>
+                <div className="col-xs-2"></div>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="col-xs-12">
             <div className="row">
@@ -129,10 +129,10 @@ const Certificate = () => {
             </div>
           </div>
         </div>
-        </div>
-        </div>
+      </div>
+    </div>
 
-        )
+  )
 }
 
-        export default Certificate
+export default Certificate
