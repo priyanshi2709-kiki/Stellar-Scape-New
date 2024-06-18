@@ -129,7 +129,7 @@ app.get('/', (req, res) => {
     res.send(req.isAuthenticated() ? `<p>Hello, ${req.user.displayName}! <a href="/logout">Logout</a></p>` : '<p>Hello, guest! <a href="/auth/github">Login with GitHub</a></p>');
 });
 
-
+app.use(express.static('./Uploads'));
 
 
 app.listen(port, () => {

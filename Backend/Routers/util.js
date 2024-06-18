@@ -13,7 +13,7 @@ const storage=multer.diskStorage({
     }
 });
 const uploader=multer({storage:storage});
-router.post('/Uploadfile',uploader.single('myfile'),(req,res)=>{
+router.post('/uploadfile',uploader.single('myfile'),(req,res)=>{
     res.json({message:'file uploaded successfully'})
 });
 const mailConfig = {

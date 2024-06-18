@@ -42,7 +42,7 @@ const UpdateProject = () => {
 
     if (res.status === 200) {
       enqueueSnackbar("Project Updated Successfully")
-      navigate('/ProjectListing');
+      // navigate('/ProjectListing');
     }
   };
 
