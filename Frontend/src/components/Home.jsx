@@ -114,7 +114,7 @@ const Home = () => {
               <>
                 <Link style={{fontSize:'20px'}} to="/Signup">SIGNUP </Link>
                 <Link style={{fontSize:'20px'}} to="/ProjectListing">PROJECTS</Link>
-                <Link style={{fontSize:'20px'}} to="/Contact">CONTACT</Link>
+                <Link style={{fontSize:'20px'}} to="/Contactnew">CONTACT</Link>
                 <Link style={{fontSize:'20px'}} to="/User/UserDashboard">DASHBOARD</Link>
                 {/* <Link to="">User Profile</Link> */}
               </>
@@ -122,7 +122,7 @@ const Home = () => {
               <>
                 <Link to="/">Home</Link>
                 <Link to="/Project">Project</Link>
-                <Link to="/Contact">Contact</Link>
+                <Link to="/Contactnew">Contact</Link>
               </>
             )}
 

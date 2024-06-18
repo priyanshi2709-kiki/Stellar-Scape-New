@@ -10,7 +10,7 @@ function USidebar({openSidebarToggle, OpenSidebar}) {
     <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive": ""}>
         <div className='sidebar-title'>
             <div className='sidebar-brand'>
-                <h6 className='icon_header'/> OpenGalaxy
+                <h6 className='icon_header'/> Source Hype
             </div>
             <span className='icon1 close_icon' onClick={OpenSidebar}>X</span>
         </div>

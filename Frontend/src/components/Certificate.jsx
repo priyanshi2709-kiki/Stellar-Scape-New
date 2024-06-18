@@ -27,7 +27,7 @@ const Certificate = () => {
       <div className="pm-certificate-border col-xs-12">
         <div className="row pm-certificate-header">
           <div className="pm-certificate-title cursive col-xs-12 text-center">
-            <h2 >Source Nest contribution certificate</h2>
+            <h2 >Source Hype contribution certificate</h2>
             <img src={logo} alt="" style={{ width: '20%', marginTop: '-35px', marginBottom: '-70px' }} />
           </div>
         </div>

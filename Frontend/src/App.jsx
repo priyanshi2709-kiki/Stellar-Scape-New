@@ -4,7 +4,6 @@ import Home from './components/Home'
 import './App.css'
 import Signup from './components/Signup'
 import { SnackbarProvider } from 'notistack'
-import Contact from './components/Contact'
 import ProjectListing from './components/ProjectListing'
 import Login from './components/Login'
 import { AppProvider } from './AppContext'
@@ -32,6 +31,8 @@ import AddProjects from './components/AddProjects'
 import Certificate from './components/Certificate'
 import AdminAuth from './AdminAuth'
 import UserAuth from './UserAuth'
+import Certificate2 from './components/Certificate2'
+import Contactnew from './components/Contactnew'
 
 const App = () => {
   return (
@@ -48,7 +49,6 @@ const App = () => {
               <Route path='/Login' element={<Login />} />
               <Route path='/Signup' element={<Signup />} />
              { /*<Route path='/Navbar' element={<Navbar/>} />*/}
-              <Route path='/Contact' element={<Contact />} />
              
               <Route path='/ProjectListing' element={<ProjectListing />} />
               <Route path='/UpdateProject' element={<UpdateProject />} />
@@ -60,8 +60,8 @@ const App = () => {
               <Route path='/UpdateTask/:id' element={<UpdateTask />} />
               <Route path='/View/:id' element={<UserAuth><View /></UserAuth>} />
               <Route path='/Certificate' element={<Certificate />} />
-             
-
+              <Route path='/Certificate2' element={<Certificate2 />} />
+              <Route path='/Contactnew' element={<Contactnew />} />
               <Route path='/Admin' element={<AdminAuth><Main/></AdminAuth>}>
               <Route path='Header' element={<Header />} />
               <Route path='Sidebar' element={<Sidebar />} />

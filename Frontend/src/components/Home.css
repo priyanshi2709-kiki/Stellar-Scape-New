@@ -28,16 +28,12 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   scroll-behavior:smooth;
   
 }
 
 body {
-  max-width: 1280px;
-  margin: 0 auto;
   background-color: #EEF7FF;
   height: 100%;
   background-size: cover;
