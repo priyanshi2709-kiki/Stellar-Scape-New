@@ -52,7 +52,6 @@ const UserDashboard = () => {
                   <h5 style={{marginTop:'10px'}}>Status : {project.status}</h5>
                   {project.status === 'Completed' ? <Link to='/Certificate' className='btn btn-primary w-25 mt-3'>Get Certificate</Link> : null}
                 </div>
-
               </div>
             </div>
           </div>
