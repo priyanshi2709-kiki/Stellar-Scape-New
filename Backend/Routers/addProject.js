@@ -45,6 +45,7 @@ router.delete('/delete/:id', (req, res) => {
 
 });
 router.put('/update/:id', (req, res) => {
+    console.log(req.body);
     Model.findByIdAndUpdate(req.params.id, req.body, {new:true}) //new will give updated response
     .then((result) => {
         res.json(result);

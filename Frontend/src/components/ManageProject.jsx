@@ -27,6 +27,13 @@ const ManageProject = () => {
             fetchUserData();
         }
     }
+    // const updateProject = async (status) => {
+    //     const res = await fetch("http://localhost:3000/project/update/" + id, {
+    //         method: "PUT",
+    //         header: { "Content-type": "application/json" },
+    //         body : JSON.stringify({ status: "Completed"})
+    //     });
+    // } 
 
     const displayProject = () =>{
         return Data.map((obj) => (
